@@ -68,6 +68,15 @@
         </footer>
         <a href="#" class="to-top">↑</a>
     </div>
-    <script>/* Скрипт кнопки "Наверх" */</script>
+    <script>/* Скрипт кнопки "Наверх" */
+    window.addEventListener('scroll', function() {
+            const toTop = document.querySelector('.to-top');
+            if (window.pageYOffset > 300) {
+                toTop.classList.add('visible');
+            } else {
+                toTop.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>

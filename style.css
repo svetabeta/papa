@@ -153,6 +153,13 @@ body {
             text-decoration: none;
         }
         
+        .future-card {
+            background:white;
+            border-radius:8px;
+            padding:20px;
+            margin:15px 0;
+            box-shadow:0 3px 10px rgba(0,0,0,0.1);
+        }
         /* Адаптивность */
         @media (max-width: 768px) {
             .main-layout {

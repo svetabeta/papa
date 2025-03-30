@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Кризис демократии | Судьба демократии</title>
+    <!-- Стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Современные вызовы демократии</h1>
+             <nav class="main-nav">
+                <a href="index.html" class="nav-item">Главная</a>
+                <a href="history.html" class="nav-item ">История</a>
+                <a href="philosophy.html" class="nav-item">Философия</a>
+                <a href="crisis.html" class="nav-item current">Кризис</a>
+                <a href="future.html" class="nav-item ">Будущее</a>
+                <a href="forum.html" class="nav-item">Форум</a>
+                <a href="contacts.html" class="nav-item">Контакты</a>
+            </nav>
+        </header>
+        
+        <main class="content">
+            <div class="page-content">
+                <div class="warning-box">
+                    <h3>Важно!</h3>
+                    <p>Кризис демократии — это не её крах, а необходимость трансформации</p>
+                </div>
+                
+                <h2>Основные проблемы</h2>
+                <h3>Популизм</h3>
+                <p>Подмена реальной политики яркими лозунгами</p>
+                
+                <h3>Цифровизация</h3>
+                <p>Социальные сети как инструмент манипуляции</p>
+            </div>
+        </main>
+        
+        <footer><!-- footer -->
+         <div class="footer-content">
+                <div class="copyright">© 2023 Проект "Судьба демократии"</div>
+                <div class="footer-links">
+                    <a href="mailto:novademocracy@gmail.com">Контакты</a>
+                    <a href="forum.html">Форум</a>
+                    <a href="about.html">Об авторе</a>
+                </div>
+            </div>
+        </footer>
+        <a href="#" class="to-top">↑</a>
+    </div>
+    <script>/* Скрипт кнопки */
+    window.addEventListener('scroll', function() {
+            const toTop = document.querySelector('.to-top');
+            if (window.pageYOffset > 300) {
+                toTop.classList.add('visible');
+            } else {
+                toTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

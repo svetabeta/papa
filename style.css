@@ -73,7 +73,7 @@ body {
         
         /* Ваши изображения */
         #img1 { 
-            background-image: url('images/craud.jpeg');
+            background-image: url('images/craud.JPEG');
             grid-column: span 2;
             height: 250px;
         }

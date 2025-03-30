@@ -16,7 +16,7 @@ body {
             flex-direction: column;
         }
         
-        /* Макет для главной страницы */
+        /* Макет для главной страницы */
         .main-layout {
             display: flex;
             gap: 40px;
@@ -49,7 +49,7 @@ body {
             margin-bottom: 30px;
         }
         
-        /* Стили для каскада изображений */
+        /* Стили для каскада изображений */
         .image-cascade {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -160,9 +160,8 @@ body {
             margin:15px 0;
             box-shadow:0 3px 10px rgba(0,0,0,0.1);
         }
-
-
-/* НОВЫЕ СТИЛИ ДЛЯ КОНТЕНТА */
+        
+        /* НОВЫЕ СТИЛИ ДЛЯ КОНТЕНТА */
         .page-content {
             background: white;
             padding: 30px;
@@ -209,7 +208,32 @@ body {
 }
 .physical { background: #e3f2fd; }
 .symbolic { background: #fff8e1; }
-
+ .contact-card {
+            background:white;
+            padding:25px;
+            border-radius:8px;
+            margin-bottom:20px;
+        }
+        
+ .warning-box {
+            background:#fff8e1;
+            border-left:4px solid #ffc107;
+            padding:15px;
+            margin:20px 0;
+        }
+  .forum-form {
+            background:white;
+            padding:25px;
+            border-radius:8px;
+            margin-bottom:30px;
+        }
+        .forum-post {
+            background:white;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:8px;
+        }
+        
         /* Адаптивность */
         @media (max-width: 768px) {
             .main-layout {

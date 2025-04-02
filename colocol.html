@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вече 2.0</title>
+    <style>
+        body {
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .bell {
+            width: 150px;
+            height: 150px;
+            background: gold;
+            border-radius: 50% 50% 0 0;
+            margin: 30px auto;
+            position: relative;
+            cursor: pointer;
+            animation: swing 3s infinite alternate;
+            box-shadow: 0 0 20px rgba(255,215,0,0.7);
+        }
+        .bell:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 20px;
+            height: 30px;
+            background: #8B4513;
+            transform: translateX(-50%);
+            border-radius: 0 0 5px 5px;
+        }
+        @keyframes swing {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px;
+            min-height: 60px;
+            transition: all 0.3s;
+        }
+        .highlight {
+            color: #FF4500;
+            text-shadow: 0 0 5px red;
+        }
+        .hint {
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ТВОЁ МОЛЧАНИЕ — ЭТО...</h1>
+    <div class="bell" id="bell"></div>
+    <div class="message" id="message">...предательство предков</div>
+    <div class="hint">Кликни на колокол — услышь правду</div>
+
+    <script>
+        const phrases = [
+            "...кровь на твоих руках",
+            "...подарок тиранам",
+            "...цепь для детей",
+            "...стыд перед внуками"
+        ];
+        
+        const bell = document.getElementById('bell');
+        const message = document.getElementById('message');
+        
+        // Звук колокола (создаём динамически)
+        function playBellSound() {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.type = "sine";
+            oscillator.frequency.value = 440;
+            gainNode.gain.value = 0.3;
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            oscillator.start();
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5);
+            oscillator.stop(audioCtx.currentTime + 1.5);
+        }
+        
+        bell.addEventListener('click', function() {
+            // Анимация удара
+            this.style.animation = 'none';
+            this.offsetHeight; // Trigger reflow
+            this.style.animation = 'swing 0.5s ease-in-out';
+            
+            // Эффект для текста
+            message.classList.add('highlight');
+            setTimeout(() => message.classList.remove('highlight'), 500);
+            
+            // Меняем фразу
+            message.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+            
+            // Звук и вибрация
+            playBellSound();
+            if (navigator.vibrate) navigator.vibrate(200);
+        });
+    </script>
+</body>
+</html>

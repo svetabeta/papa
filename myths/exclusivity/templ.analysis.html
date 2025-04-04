@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анатомия мифа исключительности</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        /* Дополнительные стили для этой страницы */
+        .hero-section {
+            background: linear-gradient(rgba(255, 140, 0, 0.8), rgba(255, 140, 0, 0.5)), 
+                        url('../../images/ruins.jpg');
+            background-size: cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .myth-component {
+            background: var(--primary-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        .myth-component::before {
+            content: "⚠️";
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            font-size: 24px;
+        }
+        .history-case {
+            border-left: 3px solid var(--danger);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .history-case:hover {
+            background: #FFEEEE;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../analysis/index.html">Разбор</a>
+        <a href="../critique/index.html">Критика</a>
+        <a href="../solutions/index.html">Решения</a>
+    </nav>
+
+    <div class="container">
+        <!-- Герой-секция с главным тезисом -->
+        <div class="hero-section">
+            <h1>Как миф исключительности удерживает режимы у власти?</h1>
+            <p class="lead">Когда реальность невыносима, люди выбирают красивый миф — даже если он ведёт к пропасти.</p>
+        </div>
+
+        <!-- Основной текст -->
+        <div class="card">
+            <p><strong>Авторитарные режимы строятся не на силе, а на мифах.</strong> Миф — это не просто ложь, а 
+            <span class="highlight">альтернативная вселенная</span>, где страдания становятся подвигом, 
+            отсталость — духовным превосходством, а диктатор — спасителем.</p>
+
+            <div class="myth-component">
+                <h2>Главный миф: «Мы — исключительные»</h2>
+                <p>Этот нарратив живёт тысячелетиями, меняя лишь форму:</p>
+                
+                <!-- Интерактивные исторические примеры -->
+                <div class="history-case" onclick="toggleCase('rome')">
+                    <h3>Римская империя</h3>
+                    <div id="rome-case" style="display: none;">
+                        <p>«Pax Romana» — якобы божественная миссия нести «цивилизацию» варварам. Результат: 
+                        <strong>распад из-за коррупции и перенапряжения</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="history-case" onclick="toggleCase('third-reich')">
+                    <h3>Нацистская Германия</h3>
+                    <div id="third-reich-case" style="display: none;">
+                        <p>Миф о «расе господ» требовал уничтожения «недочеловеков». Итог: 
+                        <strong>крах за 12 лет и 60 млн смертей</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блоки компонентов мифа -->
+            <div class="myth-component">
+                <h2>Из чего сделан миф?</h2>
+                <div class="myth-part">
+                    <h3>1. Сакральное прошлое</h3>
+                    <p>«Мы — наследники Византии/СССР/Древних Королей» → 
+                    <button onclick="revealFact('past-fact')">Разоблачить</button></p>
+                    <div id="past-fact" style="display: none;">
+                        <p><strong>Правда:</strong> Византия пала из-за коррупции, СССР — из-за экономической 
+                        неэффективности. Наследственность не гарантирует успеха.</p>
+                    </div>
+                </div>
+                
+                <div class="myth-part">
+                    <h3>2. Мнимые враги</h3>
+                    <p>«Они хотят уничтожить нашу культуру!» → 
+                    <button onclick="revealFact('enemies-fact')">Кто реально виноват?</button></p>
+                    <div id="enemies-fact" style="display: none;">
+                        <p><strong>Анализ:</strong> В 80% случаев кризисы вызваны внутренними проблемами 
+                        (коррупция, закостенелость элит), а не внешними силами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="../critique/index.html" class="btn">Узнать, чем это опасно →</a>
+    </div>
+
+    <script>
+        // Функции для интерактива
+        function toggleCase(id) {
+            const element = document.getElementById(id + '-case');
+            element.style.display = element.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function revealFact(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

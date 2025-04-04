@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Альтернатива: исключительность как ответственность</h1>
+    
+    <div class="solution-card">
+        <h2>Подмена нарратива</h2>
+        <p><strong>Было:</strong> «Мы должны защищаться от чужих»</p>
+        <p><strong>Стало:</strong> «Мы можем учиться у других, сохраняя своё»</p>
+        <button onclick="generateAlternative()">Сгенерировать свой вариант</button>
+        <div id="alternative-output"></div>
+    </div>
+    
+    <div class="solution-card">
+        <h2>Кейсы трансформации</h2>
+        <div class="case-study">
+            <h3>Послевоенная Германия</h3>
+            <p>От «арийского превосходства» к «культуре памяти».</p>
+            <a href="#" class="btn-small">Подробнее</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const alternatives = [
+        "«Наша уникальность — в умении диалога»",
+        "«Особый путь — это ответственность перед человечеством»"
+    ];
+    function generateAlternative() {
+        const output = document.getElementById('alternative-output');
+        output.innerHTML = alternatives[Math.floor(Math.random() * alternatives.length)];
+    }
+</script>

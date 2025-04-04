@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Философия демократии | Судьба демократии</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;700&display=swap" 
+	 href="css/main-style.css">  
+    <style>
+        /* ОБЩИЕ СТИЛИ (как в index.html) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2, h3 {
+            font-family: 'Comfortaa', cursive;
+            color: #2c3e50;
+        }
+        /* ... остальные общие стили ... */
+
+        /* НОВЫЕ СТИЛИ ДЛЯ КОНТЕНТА */
+        .page-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+        .page-content h2 {
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #3498db;
+        }
+        .page-content h3 {
+            color: #2c3e50;
+            margin: 30px 0 15px;
+            font-size: 1.3rem;
+        }
+        .philosophy-quote {
+            font-style: italic;
+            border-left: 3px solid #3498db;
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #555;
+        }
+		
+		/* Простые стили для нового блока */
+.simple-visual {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+.worlds {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+.world {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+}
+.physical { background: #e3f2fd; }
+.symbolic { background: #fff8e1; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Философские основания демократии</h1>
+            
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">Главная</a>
+                <a href="history.html" class="nav-item">История</a>
+                <a href="philosophy.html" class="nav-item current">Философия</a>
+                <a href="crisis.html" class="nav-item">Кризис</a>
+                <a href="future.html" class="nav-item">Будущее</a>
+                <a href="forum.html" class="nav-item">Форум</a>
+                <a href="contacts.html" class="nav-item">Контакты</a>
+            </nav>
+        </header>
+        
+        <main class="content">
+			<div class="text-block pastel-purple">  
+    <h2>Концепция культурных программ</h2>  
+    <p>Ваш текст...</p>  
+    <div class="quote-block">  
+        <p>«Демократия — это операционная система общества»</p>  
+    </div>  
+</div>  
+            <!-- ВОТ ЭТОТ БЛОК БУДЕТ СТИЛИЗОВАН -->
+            <div class="page-content">
+                <h2>Античная философия</h2>
+                <p>Классические концепции демократии зародились в трудах древнегреческих мыслителей.</p>
+                
+                <div class="philosophy-quote">
+                    "Демократия возникает тогда, когда бедняки, одержав победу, некоторых из своих врагов уничтожат, других изгонят, а остальных уравняют в гражданских правах" — Платон
+                </div>
+                
+                <h3>Платон</h3>
+                <p>Критиковал демократию в "Государстве", сравнивая её с кораблём, где пьяная толпа назначает некомпетентного капитана.</p>
+                
+                <h3>Аристотель</h3>
+                <p>Различал три "правильные" формы правления, считая демократию искажённой версией политии.</p>
+                
+                <h2>Христианская мысль</h2>
+                <p>Развитие концепций естественного права и достоинства личности.</p>
+            </div>
+			<!-- ВАШ СТАРЫЙ ТЕКСТ ЗДЕСЬ -->
+    
+    <!-- === ВСТАВИТЬ НОВЫЙ БЛОК ЗДЕСЬ === -->
+	<!-- НАЧАЛО ВСТАВКИ -->
+<div class="simple-visual">
+    <h3>Два мира</h3>
+    <div class="worlds">
+        <div class="world physical">
+            <h4>Физический</h4>
+            <p>Объективная реальность</p>
+        </div>
+        <div class="world symbolic">
+            <h4>Символический</h4>
+            <p>Культурные программы</p>
+        </div>
+    </div>
+</div>
+<!-- КОНЕЦ ВСТАВКИ -->
+    
+    <!-- Остальной существующий текст -->
+			
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">© 2023 Проект "Судьба демократии"</div>
+                <div class="footer-links">
+                    <a href="mailto:contact@democracy-project.ru">Контакты</a>
+                    <a href="forum.html">Форум</a>
+                    <a href="about.html">Об авторе</a>
+                </div>
+            </div>
+        </footer>
+        
+        <a href="#" class="to-top">↑</a>
+    </div>
+    
+    <script>
+        // Скрипт для кнопки "Наверх"
+        window.addEventListener('scroll', function() {
+            const toTop = document.querySelector('.to-top');
+            if (window.pageYOffset > 300) {
+                toTop.classList.add('visible');
+            } else {
+                toTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

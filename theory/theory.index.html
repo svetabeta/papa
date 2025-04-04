@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теория культурного кода | BIG CULTURAL MORPH</title>
+    <style>
+        /* Общие стили (как на главной) */
+        :root {
+            --primary: #FF8C00;
+            --secondary: #FF4500;
+            --light: #FFF8DC;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        /* Специфичные стили для Теории */
+        .theory-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .concept-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .concept-card h3 {
+            color: var(--primary);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .diagram {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="sun-animation"></div>
+    
+    <header class="theory-header">
+        <h1>Теория культурного кода</h1>
+        <p>Как мифы диктатур внедряются в коллективное бессознательное</p>
+    </header>
+    
+    <main class="container">
+        <section class="concept-grid">
+            <div class="concept-card">
+                <h3>Архетип «Спасителя»</h3>
+                <p>Механизм, превращающий страх хаоса в потребность в «сильной руке».</p>
+                <div class="diagram">
+                    Кризис → Страх → Поиск спасителя → Передача власти
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <h3>Миф «Осаждённой крепости»</h3>
+                <p>Создание образа внешнего врага для консолидации власти.</p>
+                <div class="diagram">
+                    Угроза → Мобилизация → Жертвенность → Авторитаризм
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <h3>Ритуалы подчинения</h3>
+                <p>Как массовые мероприятия программируют покорность.</p>
+                <div class="diagram">
+                    Повторение → Эмоциональный резонанс → Автоматизм
+                </div>
+            </div>
+        </section>
+        
+        <section style="text-align: center; margin: 4rem 0;">
+            <a href="/tools" class="cta">Применить эти знания →</a>
+        </section>
+    </main>
+    
+    <footer><!-- Как на главной --></footer>
+    
+    <script src="/js/common.js"></script>
+</body>
+</html>

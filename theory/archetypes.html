@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архетипы власти | BIG CULTURAL MORPH</title>
+    <style>
+        /* Общие стили (как на главной) */
+        :root {
+            --primary: #FF8C00;
+            --secondary: #FF4500;
+            --light: #FFF8DC;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        /* Стили для детальной страницы */
+        .detail-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+        
+        .archetype-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Общий хедер для всех страниц -->
+<header class="site-header">
+    <div class="container">
+        <a href="/" class="logo">BIG CULTURAL MORPH</a>
+        <nav>
+            <a href="/theory">Теория</a>
+            <a href="/practice">Практика</a>
+            <a href="/tools">Инструменты</a>
+            <a href="/manifesto">Манифест</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="sun-animation"></div>
+    
+    <header class="detail-header">
+        <h1>Архетипы власти</h1>
+        <p>Как универсальные образы коллективного бессознательного используются для легитимации авторитаризма</p>
+    </header>
+    
+    <main class="container">
+        <div class="archetype-card">
+            <h2>1. «Отец-спаситель»</h2>
+            <p><strong>Суть:</strong> Эксплуатация родительского архетипа для создания зависимости «лидер — народ».</p>
+            <p><strong>Примеры:</strong></p>
+            <ul>
+                <li>Титулы: «Батько», «Отец нации»</li>
+                <li>Риторика: «Я знаю, что для вас лучше»</li>
+                <li>Символы: монументы с доминирующей позой</li>
+            </ul>
+            <div style="background: #FFF4E6; padding: 1rem; margin: 1rem 0; border-radius: 5px;">
+                <strong>Как перекодировать:</strong> Перенаправить образ «отца» на институты (суды, парламент) — «Законы должны быть мудрыми родителями».
+            </div>
+        </div>
+        
+        <div class="archetype-card">
+            <h2>2. «Герой-защитник»</h2>
+            <p><strong>Суть:</strong> Создание образа лидера как единственного барьера от хаоса.</p>
+            <p><strong>Маркеры:</strong></p>
+            <ul>
+                <li>Военная униформа в мирное время</li>
+                <li>Нарратив «Если не я — будет катастрофа»</li>
+                <li>Культ «трудных решений»</li>
+            </ul>
+            <div style="background: #FFF4E6; padding: 1rem; margin: 1rem 0; border-radius: 5px;">
+                <strong>Контрнарратив:</strong> «Настоящий герой создаёт системы, которые работают без него».
+            </div>
+        </div>
+        
+        <a href="/theory" class="back-link">← Назад к обзору теорий</a>
+    </main>
+    
+    <footer><!-- Как на главной --></footer>
+</body>
+</html>

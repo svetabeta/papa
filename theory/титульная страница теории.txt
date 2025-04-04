@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теория культурного кода | BIG CULTURAL MORPH</title>
+    <style>
+        /* Сохраняем оранжевый стиль как на главной */
+        :root {
+            --primary: #FF8C00;
+            --secondary: #FF4500;
+            --light: #FFF8DC;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        .theory-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+        .chapter-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary);
+        }
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sun-animation"></div>
+    
+    <header class="theory-header">
+        <h1>Теория культурного кода</h1>
+        <p>Как мифы диктатур внедряются в коллективное сознание</p>
+    </header>
+    
+    <main class="container">
+        <!-- Карточка 1 -->
+        <div class="chapter-card">
+            <h2>Архетипы власти</h2>
+            <p>Разбор универсальных паттернов, которые эксплуатируют авторитарные режимы: «Спаситель», «Отец нации», «Герой-защитник».</p>
+            <a href="/theory/archetypes" class="btn-outline">Изучить архетипы →</a>
+        </div>
+        
+        <!-- Карточка 2 -->
+        <div class="chapter-card">
+            <h2>Язык пропаганды</h2>
+            <p>Анализ лексики, метафор и нарративов, создающих картину «осаждённой крепости».</p>
+            <a href="/theory/propaganda-language" class="btn-outline">Разобрать примеры →</a>
+        </div>
+        
+        <!-- Карточка 3 -->
+        <div class="chapter-card">
+            <h2>Ритуалы подчинения</h2>
+            <p>Как массовые мероприятия, голосования и символы программируют покорность.</p>
+            <a href="/theory/rituals" class="btn-outline">Смотреть исследование →</a>
+        </div>
+    </main>
+    
+    <footer><!-- Как на главной странице --></footer>
+</body>
+</html>

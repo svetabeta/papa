@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теория культурного кода | BIG CULTURAL MORPH</title>
+    <style>
+        :root {
+            --primary: #FF8C00;
+            --secondary: #FF4500;
+            --light: #FFF8DC;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            padding: 2rem;
+            background: white;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .tag {
+            display:inline-block;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .tag:hover {
+            background: var(--primary);
+            color: white;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin-left: 220px;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            margin-bottom: 2rem;
+        }
+        .chapter-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        .chapter-card:hover {
+            transform: translateY(-5px);
+        }
+        .chapter-title {
+            color: var(--primary);
+            margin-top: 0;
+            cursor: pointer;
+        }
+        .chapter-title:hover {
+            text-decoration: underline;
+        }
+        .btn-upfold {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            background: none;
+            cursor: pointer;
+        }
+        .btn-upfold:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .collapsable-post {
+            display: none;
+        }
+        .collapsable-post.visible {
+            display: block;
+        }
+        .chapter-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="theory header">
+        <h1>Blog</h1>
+        <p>Как мифы диктатур внедряются в коллективное бессознательное</p>
+    </header>
+
+    <main class="container">
+    	<section class="posts">
+        <!-- post -->
+        <div class="chapter-card" data-tag="a-tag">
+            <h2 class="chapter-title">Post title</h2>
+            <div class="post-teaser">Post lead</div>
+            <button class="btn-upfold">Подробнее →</button>
+            <div class="collapsable-post">
+                <p><-- Post paragraphs --></p>
+            </div>
+        </div>
+        
+        <!-- post -->
+        <div class="chapter-card" data-tag="b-tag">
+            <h2 class="chapter-title">Post 2 title</h2>
+            <div class="post-teaser">Post2 lead</div>
+            <button class="btn-upfold">Подробнее →</button>
+            <div class="collapsable-post">
+                <p><-- Post paragraphs --></p>
+                <p><-- Post paragraphs --></p>
+            </div>
+        </div>
+    </section>
+       ghjghgjhg
+    <aside class="sidebar">
+        <h3>Теги</h3>
+        <a class="tag" data-tag="all">Все</a>
+        <a class="tag" data-tag="a-tag">Тег A</a>
+        <a class="tag" data-tag="b-tag">Тег В</a>
+        <!-- Add more tags as needed -->
+    </aside>
+        
+    </main>
+    
+    
+
+    <script>
+        // Collapse/Expand functionality
+        document.querySelectorAll('.btn-upfold').forEach(button => {
+            button.addEventListener('click', () => {
+                const post = button.nextElementSibling;
+                post.classList.toggle('visible');
+            });
+        });
+
+        // Tag filtering
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                const selectedTag = tag.getAttribute('data-tag');
+                const posts = document.querySelectorAll('.chapter-card');
+
+                posts.forEach(post => {
+                    const postTag = post.getAttribute('data-tag');
+                    if (selectedTag === 'all' || postTag === selectedTag) {
+                        post.classList.remove('hidden');
+                    } else {
+                        post.classList.add('hidden');
+                        // Collapse any open posts when filtering
+                        const collapsible = post.querySelector('.collapsable-post');
+                        if (collapsible) {
+                            collapsible.classList.remove('visible');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

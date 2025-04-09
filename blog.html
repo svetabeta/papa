@@ -3,207 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Теория культурного кода | BIG CULTURAL MORPH</title>
+    <title>Блог | BIG CULTURAL MORPH</title>
     <style>
         :root {
             --primary: #FF8C00;
             --secondary: #FF4500;
             --light: #FFF8DC;
             --dark: #333;
+            --bg: #FFF8DC;
+            --text: #333;
         }
+        
         body {
             font-family: 'Georgia', serif;
             background: var(--light);
             color: var(--dark);
             line-height: 1.7;
             margin: 0;
-            padding: 0;
+            overflow-x: hidden;
         }
-        .container {
-            padding: 1rem;
-            padding-left:22%;
-            display:flex;
-            justify-content:space-between;
-            flex-wrap: wrap;
-            flex: 0 0 0;
-            box-sizing: border-box;
-        }
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 1rem;
-            padding-left:20%;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        .sidebar {
-            width: 20%;
-            padding: 2rem;
-            background: white;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        
+        .sun-animation {
             position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            box-sizing: border-box;
-            top:0;
-            left:0;
+            top: -50vh;
+            left: -50vw;
+            width: 200vw;
+            height: 200vh;
+            background: radial-gradient(circle, rgba(255,140,0,0.08) 0%, rgba(255,140,0,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: rotate 180s linear infinite;
         }
-        .tag {
-            display:inline-block;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            color: var(--primary);
-            text-decoration: none;
-            cursor: pointer;
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        .tag:hover {
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            padding: 0.8rem 1.8rem;
             background: var(--primary);
             color: white;
-            border-radius: 5px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3);
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 0.5rem;
         }
-       
-        .chapter-card {
-            background: white;
-            border-radius: 10px;
+        
+        .nav-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 69, 0, 0.4);
+        }
+        
+        /* Стили для блога */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 2rem;
-            margin: 2rem;
+        }
+        
+        .blog-post {
+            background: var(--bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--primary);
-            transition: transform 0.3s;
-            flex:1 1 33%;
+            border: 1px solid rgba(255, 140, 0, 0.3);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
         }
-        .chapter-card:hover {
+        
+        .blog-post:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.2);
         }
-        .chapter-title {
+        
+        .post-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,140,0,0.05) 0%, transparent 70%);
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .blog-post:hover .post-bg {
+            opacity: 1;
+        }
+        
+        .blog-post h2 {
             color: var(--primary);
             margin-top: 0;
-            cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
-        .chapter-title:hover {
-            text-decoration: underline;
+        
+        .post-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
-        .btn-upfold {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: all 0.3s;
-            background: none;
-            cursor: pointer;
-        }
-        .btn-upfold:hover {
-            background: var(--primary);
-            color: white;
-        }
-        .collapsable-post {
+        
+        /* Стили формы */
+        #post-form {
             display: none;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .collapsable-post.visible {
-            display: block;
+        
+        #post-form input,
+        #post-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        .chapter-card.hidden {
-            display: none;
+        
+        #post-form textarea {
+            min-height: 200px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 140, 0, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .logo { font-size: 2.2rem; }
+            nav { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
-
-    <header class="theory header">
-        <h1>Blog</h1>
-        <p>Как мифы диктатур внедряются в коллективное бессознательное</p>
-    </header>
-
-    <main class="container">
-        <!-- post -->
-        <div class="chapter-card" data-tag="a-tag">
-            <h2 class="chapter-title">Post atag title</h2>
-            <div class="post-teaser">Post lead, very long post teaser that wont fit in a single line, no into two or three lines as well and what do we do in this strange case?</div>
-            <button class="btn-upfold">Подробнее →</button>
-            <div class="collapsable-post">
-                <p><-- Post paragraphs --></p>
+    <div class="sun-animation"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">BIG CULTURAL MORPH</div>
+            <div class="tagline">Трансформация авторитарных мифов через перепрограммирование архетипов</div>
+            <nav>
+                <a href="history/dindex.html" class="nav-btn">История</a>
+                <a href="/manifesto" class="nav-btn">Онтология</a>
+                <a href="theory/index.html" class="nav-btn">Теория</a>
+                <a href="/practice" class="nav-btn">Практика</a>
+                <a href="/tools" class="nav-btn">Инструменты</a>
+                <a href="/blog.html" class="nav-btn">Блог</a>
+            </nav>
+        </header>
+        
+        <div class="blog-container">
+            <h1>Блог</h1>
+            
+            <!-- Пример поста -->
+            <div class="blog-post">
+                <div class="post-bg"></div>
+                <h2>Как архетипы формируют политическую реальность</h2>
+                <div class="post-meta">Опубликовано: 15 мая 2024</div>
+                <p>Анализ того, как древние образы продолжают влиять на современные политические процессы...</p>
+                <a href="/blog/post1" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Читать далее</a>
             </div>
+            
+            <!-- Новые посты будут добавляться сюда -->
+            <div id="posts-container"></div>
+            
+            <!-- Форма добавления поста -->
+            <div id="post-form">
+                <h2>Новый пост</h2>
+                <form id="add-post-form">
+                    <input type="text" id="post-title" placeholder="Заголовок" required>
+                    <textarea id="post-content" placeholder="Текст поста" required></textarea>
+                    <input type="text" id="post-image" placeholder="URL изображения (необязательно)">
+                    <button type="submit" class="nav-btn">Опубликовать</button>
+                </form>
+            </div>
+            
+            <button id="show-form-btn" class="nav-btn" style="margin: 2rem auto; display: block;">+ Новый пост</button>
         </div>
         
-        <!-- post -->
-        <div class="chapter-card" data-tag="b-tag">
-            <h2 class="chapter-title">Post 2 b-tag very long title that wont fit in a single line</h2>
-            <div class="post-teaser">Post2 lead</div>
-            <button class="btn-upfold">Подробнее →</button>
-            <div class="collapsable-post">
-                <p><-- Post paragraphs --></p>
-                <p><-- Post paragraphs --></p>
-            </div>
-        </div>
-        
-        <!-- post -->
-        <div class="chapter-card" data-tag="a-tag">
-            <h2 class="chapter-title">Post 3 a-tag title that fits in a single line</h2>
-            <div class="post-teaser">Post2 lead</div>
-            <button class="btn-upfold">Подробнее →</button>
-            <div class="collapsable-post">
-                <p><-- Post paragraphs --></p>
-                <p><-- Post paragraphs --></p>
-            </div>
-        </div>
-        
-        <!-- post -->
-        <div class="chapter-card" data-tag="c-tag">
-            <h2 class="chapter-title">Post 4 c-tag title that wont fit in a single line</h2>
-            <div class="post-teaser">Post4 lead this post is on the second flex row. we want to see how it goes.</div>
-            <button class="btn-upfold">Подробнее →</button>
-            <div class="collapsable-post">
-                <p><-- Post paragraphs --></p>
-                <p><-- Post paragraphs --></p>
-            </div>
-        </div>
-    </main> 
+        <footer>
+            <p>Проект культурного перепрограммирования | 2024</p>
+            <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
+        </footer>
+    </div>
     
-    <aside class="sidebar">
-        <h3>Теги</h3>
-        <a class="tag" data-tag="all">Все</a>
-        <a class="tag" data-tag="a-tag">Тег A</a>
-        <a class="tag" data-tag="b-tag">Тег В</a>
-        <a class="tag" data-tag="c-tag">Тег C</a>
-        <!-- Add more tags as needed -->
-    </aside>
-  
-    
-    
-
     <script>
-        // Collapse/Expand functionality
-        document.querySelectorAll('.btn-upfold').forEach(button => {
-            button.addEventListener('click', () => {
-                const post = button.nextElementSibling;
-                post.classList.toggle('visible');
-            });
+        // Показать/скрыть форму
+        document.getElementById('show-form-btn').addEventListener('click', function() {
+            const form = document.getElementById('post-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
         });
-
-        // Tag filtering
-        document.querySelectorAll('.tag').forEach(tag => {
-            tag.addEventListener('click', () => {
-                const selectedTag = tag.getAttribute('data-tag');
-                const posts = document.querySelectorAll('.chapter-card');
-
-                posts.forEach(post => {
-                    const postTag = post.getAttribute('data-tag');
-                    if (selectedTag === 'all' || postTag === selectedTag) {
-                        post.classList.remove('hidden');
-                    } else {
-                        post.classList.add('hidden');
-                        // Collapse any open posts when filtering
-                        const collapsible = post.querySelector('.collapsable-post');
-                        if (collapsible) {
-                            collapsible.classList.remove('visible');
-                        }
-                    }
-                });
-            });
+        
+        // Обработка формы
+        document.getElementById('add-post-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newPost = {
+                id: Date.now(),
+                title: document.getElementById('post-title').value,
+                date: new Date().toLocaleDateString('ru-RU'),
+                content: document.getElementById('post-content').value,
+                image: document.getElementById('post-image').value || ''
+            };
+            
+            // Добавляем пост в начало списка
+            const postHtml = `
+                <div class="blog-post">
+                    <div class="post-bg"></div>
+                    <h2>${newPost.title}</h2>
+                    <div class="post-meta">Опубликовано: ${newPost.date}</div>
+                    <p>${newPost.content.substring(0, 150)}...</p>
+                    <a href="/blog/post-${newPost.id}" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Читать далее</a>
+                </div>
+            `;
+            
+            document.getElementById('posts-container').insertAdjacentHTML('afterbegin', postHtml);
+            
+            // Очищаем форму
+            this.reset();
+            this.style.display = 'none';
+            
+            // Сохраняем в localStorage
+            savePostToLocalStorage(newPost);
         });
+        
+        // Загрузка постов из localStorage
+        function loadPosts() {
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            posts.forEach(post => {
+                const postHtml = `
+                    <div class="blog-post">
+                        <div class="post-bg"></div>
+                        <h2>${post.title}</h2>
+                        <div class="post-meta">Опубликовано: ${post.date}</div>
+                        <p>${post.content.substring(0, 150)}...</p>
+                        <a href="/blog/post-${post.id}" class="nav-btn" style="display: inline-block; margin-top: 1rem;">Читать далее</a>
+                    </div>
+                `;
+                document.getElementById('posts-container').insertAdjacentHTML('beforeend', postHtml);
+            });
+        }
+        
+        // Сохранение в localStorage
+        function savePostToLocalStorage(post) {
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            posts.unshift(post); // Добавляем в начало массива
+            localStorage.setItem('blogPosts', JSON.stringify(posts));
+        }
+        
+        // Загружаем посты при старте
+        document.addEventListener('DOMContentLoaded', loadPosts);
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIG CULTURAL MORPH — Алхимия культурных кодов</title>
+    <title>BIG CULTURAL MORPH — Трансформация культурных кодов</title>
     <style>
         :root {
             --primary: #FF8C00;
@@ -12,25 +12,30 @@
             --dark: #333;
         }
         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Georgia', serif;
             background: var(--light);
             color: var(--dark);
-            line-height: 1.7;
-            margin: 0;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         
-        .sun-animation {
+        .sunburst {
             position: fixed;
             top: -50vh;
             left: -50vw;
             width: 200vw;
             height: 200vh;
-            background: radial-gradient(circle, rgba(255,140,0,0.08) 0%, rgba(255,140,0,0) 70%);
+            background: radial-gradient(circle, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0) 70%);
             pointer-events: none;
             z-index: -1;
-            animation: rotate 180s linear infinite;
+            animation: rotate 120s linear infinite;
         }
         
         @keyframes rotate {
@@ -38,19 +43,15 @@
             100% { transform: rotate(360deg); }
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
         header {
+            padding: 2rem;
             text-align: center;
-            padding: 3rem 0;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
         
         .logo {
-            font-size: 3rem;
+            font-size: 2.0rem;
             font-weight: bold;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
@@ -59,23 +60,21 @@
         }
         
         .tagline {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            max-width: 700px;
-            margin: 0 auto;
             font-style: italic;
+            color: var(--secondary);
+            margin-bottom: 2rem;
         }
         
         nav {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin: 2.5rem 0;
+            margin-top: 1.5rem;
             flex-wrap: wrap;
         }
         
         .nav-btn {
-            padding: 0.8rem 1.8rem;
+            padding: 0.8rem 1.5rem;
             background: var(--primary);
             color: white;
             border: none;
@@ -85,25 +84,22 @@
             transition: all 0.3s;
             text-decoration: none;
             font-size: 1rem;
-            box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3);
-			transition: all 0.3s;
-            display: inline-block; /* Добавляем это */
-            margin: 0.5rem; /* Отступ между кнопками */
         }
         
         .nav-btn:hover {
             background: var(--secondary);
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(255, 69, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
         }
         
         .hero {
             text-align: center;
-            padding: 3rem 0;
+            padding: 4rem 2rem;
+            position: relative;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
@@ -118,14 +114,13 @@
             background: var(--secondary);
             color: white;
             padding: 1rem 2.5rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             border-radius: 50px;
             display: inline-block;
             margin-top: 1rem;
             text-decoration: none;
             transition: all 0.3s;
             border: 2px solid var(--secondary);
-            font-weight: bold;
         }
         
         .cta:hover {
@@ -134,20 +129,23 @@
         }
         
         .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
-            margin: 4rem 0;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .feature-card {
+            flex: 1 1 300px;
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s;
-            border-top: 4px solid var(--primary);
-            text-align: center;
+            border-top: 5px solid var(--primary);
         }
         
         .feature-card:hover {
@@ -158,115 +156,101 @@
         .feature-card h3 {
             color: var(--primary);
             margin-bottom: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
         }
         
         footer {
             text-align: center;
-            padding: 3rem 0;
+            padding: 3rem 2rem;
+            background: var(--dark);
+            color: white;
             margin-top: 3rem;
-            border-top: 1px solid rgba(255, 140, 0, 0.3);
-        		}
-          /* Стили для блога */
-        .blog-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
         }
         
-        .blog-post {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .sun-icon {
+            display: inline-block;
+            animation: pulse 2s infinite alternate;
         }
         
-        .blog-post h2 {
-            color: var(--primary);
-            margin-top: 0;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
         
-        .post-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-      
-		
-		
         @media (max-width: 768px) {
-            .logo { font-size: 2.2rem; }
-            .hero h1 { font-size: 1.8rem; }
-            nav { flex-direction: column; align-items: center; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
         }
-				
     </style>
 </head>
 <body>
-    <div class="sun-animation"></div>
+    <div class="sunburst"></div>
     
-    <div class="container">
-        <header>
-            <div class="logo">BIG CULTURAL MORPH</div>
-            <div class="tagline">Трансформация авторитарных мифов через перепрограммирование архетипов</div>
-            <nav>
-               
-				  <a href="history/dindex.html" class="nav-btn">История</a>
-				  <a href="/manifesto" class="nav-btn">Онтология</a>
-                <a href="theory/index.html" class="nav-btn">Теория</a>
-                <a href="/practice" class="nav-btn">Практика</a>
-                <a href="/tools" class="nav-btn">Инструменты</a>
+    <header>
+        <div class="logo">BIG CULTURAL MORPH</div>
+        <div class="tagline">Трансформация культурных кодов через архетипы</div>
+        <nav>
+		  <a href="/manifesto" class="nav-btn">Онтология</a>
+				  <a href="theory/index.html" class="nav-btn">Теория</a>
+				 <a href="/practice" class="nav-btn">Практика</a>
+		            <a href="/tools" class="nav-btn">Инструменты</a>
+					 <a href="history/dindex.html" class="nav-btn">История</a>
               <a href="blog.html" class="nav-btn">Блог</a>
-			</nav>
-        </header>
+					
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Культурная трансформация — <br>без насилия и разрушения</h1>
+		<h2>от мифов диктатуры к кодам свободы</h2>
+        <p>Мы перепрограммируем авторитарные мифы, используя их же энергию. Наш метод — алхимия архетипов, а не лобовая атака.</p>
+        <a href="/manifesto" class="cta">Присоединиться к трансформации</a>
+    </section>
+    
+    <section class="features">
+        <div class="feature-card">
+            <h3><span class="sun-icon">☀️</span> Деконструкция</h3>
+            <p>Разбираем мифы диктатур на атомарные элементы, находим их слабые места и внутренние противоречия.</p>
+        </div>
         
-        <section class="hero">
-            <h1>Культурная алхимия: от мифов диктатуры к кодам свободы</h1>
-            <p>Мы не разрушаем старые символы — мы переплавляем их в новые формы, сохраняя энергию, но меняя вектор.</p>
-            <a href="/manifesto" class="cta">Присоединиться к трансформации</a>
-        </section>
+        <div class="feature-card">
+            <h3><span class="sun-icon">🔥</span> Трансмутация</h3>
+            <p>Превращаем энергию страха в энергию созидания, используя те же символы, но с новыми смыслами.</p>
+        </div>
         
-        <section class="features">
-            <div class="feature-card">
-                <h3>Деконструкция</h3>
-                <p>Анализируем структуру мифов власти, выявляя их скрытые противоречия и слабые места.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Трансмутация</h3>
-                <p>Превращаем энергию страха в энергию созидания через переосмысление символов.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Инкубация</h3>
-                <p>Создаём новые культурные ритуалы, которые естественно приживаются в существующей среде.</p>
-            </div>
-        </section>
-        
-        <footer>
-            <p>Проект культурного перепрограммирования | 2024</p>
-            <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
-        </footer>
-    </div>
+        <div class="feature-card">
+            <h3><span class="sun-icon">🌱</span> Инкубация</h3>
+            <p>Создаём новые культурные ритуалы, которые естественно приживаются в существующей среде.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Проект культурного перепрограммирования | 2024</p>
+        <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
+    </footer>
     
     <script>
-        // Плавное появление контента
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.container > *');
-            elements.forEach((el, i) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, 200 * i);
-            });
-        });
-        
         // Анимация солнца при скролле
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const sun = document.querySelector('.sun-animation');
-            sun.style.transform = `rotate(${scrollY / 5}deg)`;
+            const sunburst = document.querySelector('.sunburst');
+            sunburst.style.transform = `rotate(${scrollY / 10}deg)`;
+        });
+        
+        // Эффект "вспышки" при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s';
+                document.body.style.opacity = '1';
+            }, 100);
         });
     </script>
 </body>

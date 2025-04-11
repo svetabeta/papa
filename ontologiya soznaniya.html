@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ключевые мифы диктатур</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #FFF9F0; /* Светло-оранжевый фон */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center; /* Центрируем содержимое */
+        }
+        
+        /* Навигация */
+        nav {
+            background: linear-gradient(135deg, #FF8C00, #E67E22);
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Заголовок */
+        h1 {
+            color: #D35400; /* Тёмно-оранжевый */
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Список мифов */
+        .myth-list {
+            margin: 2rem auto;
+        }
+        
+        .myth-item {
+            background: rgba(255, 236, 179, 0.5);
+            border-left: 4px solid #FF8C00;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        
+        .myth-item:hover {
+            background: rgba(255, 203, 107, 0.7);
+            transform: translateX(5px);
+        }
+        
+        .myth-item h2 {
+            color: #E67E22;
+            margin-top: 0;
+        }
+        
+        /* Всплывающие окна */
+        .myth-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 700px;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 2px solid #FFA500;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .myth-popup {
+                width: 90%;
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="index.html">Онтология</a>
+    </nav>
+
+    <div class="container">
+        <h1>Онтология сознания</h1>
+        <p>Кликните на раздел, чтобы увидеть анализ</p>
+        
+        <div class="myth-list">
+            <!-- Миф 1 -->
+            <div class="myth-item" onclick="showPopup('exceptionalism')">
+                <h2>Сознание не есть продукт мозга</h2>
+                <p>Герметичность сознания</p>
+            </div>
+            
+            <!-- Миф 2 -->
+            <div class="myth-item" onclick="showPopup('special-path')">
+                <h2>Миф об особом пути</h2>
+                <p>«Наши традиции несовместимы с западными ценностями»</p>
+            </div>
+            
+            <!-- Миф 3 -->
+            <div class="myth-item" onclick="showPopup('fortress')">
+                <h2>Миф осаждённой крепости</h2>
+                <p>«Весь мир против нас»</p>
+            </div>
+            
+            <!-- Миф 4 -->
+            <div class="myth-item" onclick="showPopup('strong-hand')">
+                <h2>Миф сильной руки</h2>
+                <p>«Только жёсткая власть может удержать страну от хаоса»</p>
+            </div>
+            
+            <!-- Миф 5 -->
+            <div class="myth-item" onclick="showPopup('golden-age')">
+                <h2>Миф Золотого века</h2>
+                <p>«Раньше было лучше, надо вернуться в прошлое»</p>
+            </div>
+            
+            <!-- Миф 6 -->
+            <div class="myth-item" onclick="showPopup('stability')">
+                <h2>Миф мнимой стабильности</h2>
+                <p>«Да, есть проблемы, но при других будет хуже»</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Всплывающие окна -->
+    <div id="exceptionalism" class="myth-popup">
+        <span class="close-btn" onclick="hidePopup()">×</span>
+        <h2>Сознание это социальный феномен</h2>
+        <p><strong></strong>
+		Основные принципы онтологии сознания.
+		Онтология сознания это представление о том, 
+		как устроено сознание и каковы, соответственно  
+		должны быть принципы работы с сознанием. 
+		Крайне важно в самом начале зафиксировать основной принцип:
+		 Сознание это не психологический феномен.
+		И не продукт работы мозга. И мы не можем изучать общественное
+		сознание, изучая работу мозга или изучая мышление 
+		отдельных индивидов. 
+		Соответственно и менять сознание невозможно, 
+		воздействуя на психические процессы отдельных индивидов,
+		или обращаясь к  разуму отдельных индивидов.Сознание 
+		(общественное ли, индивидуальное ли) это социальный продукт,
+		Оно возникает в результате общения людей в процессе 
+		практического построения социума и существует в виде 
+		некоего устойчивого поля, которое априори содержит в себе 
+		алгоритмы, программирующие поведение индивидов. 
+		Алгоритмы сознания первичны по отношению к индивидам и 
+		усваиваются индивидами в процессе социализации и в 
+		процессе инкультурации.Общественное сознание можно описать 
+		как совокупность смыслов, символов, идеалов, ценностей, норм,
+		практик, мифов, доминирующих в данном обществе.
+		Соответственно и менять сознание возможно лишь меняя 
+		доминирующие в обществе мифы, смыслы и символы, 
+		а также видоизменяя культурные программы и выстраивая новые 
+		сферы культуры.Из теории  культуры и из социологии мы знаем,
+		что миф это неразложимая на рациональные составляющие 
+		конструкция. Соответственно изменить миф с помощью рациональной 
+		критики или рациональных аргументов невозможно. 
+		Таким образом  сознание, которое, как мы видим,
+		опирается в основном на мифологию, герметично,
+		непроницаемо для рациональных аргументов.
+		В этом и состоит основная трудность и низкая эффективность 
+		деятельности оппозиции и бесплодность всех форм просветительских 
+		усилий. 
+		 Сознание метафорически можно представить 
+		себе как некое силовое поле.Практика изменения КП исходит из того факта,
+		что общественное  сознание очень не просто устроено. 
+		Оно не является однородным ни по содержанию, ни по форме.
+		Сознательное в нем соседствует с бессознательным, 
+		а рациональное с иррациональным. 
+		И еще неизвестно, какие слои сильнее.
+		Для того, чтобы работать с сознанием, для того,
+		чтобы эффективно его менять, надо: а) создать онтологию сознания
+		б) создать технологию трансформации сознания 
+		в) построить машину сознания.
+		  </p>
+        <h3>Примеры:</h3>
+        <ul>
+            <li>«Россия — страна-цивилизация» (Путин)</li>
+            <li>«Американская исключительность»</li>
+        </ul>
+        <h3>Разбор:</h3>
+        <p>Все империи, строившиеся на этом мифе (Британская, Османская),
+		либо распались, либо радикально изменили курс.</p>
+    </div>
+    
+    <div id="special-path" class="myth-popup">
+        <span class="close-btn" onclick="hidePopup()">×</span>
+        <h2>Миф об особом пути</h2>
+        <p><strong>Суть:</strong> Отрицание универсальных закономерностей в пользу «национальной специфики».</p>
+        <h3>Исторические параллели:</h3>
+        <ul>
+            <li>Япония периода сакоку (1641-1853): изоляция → отставание</li>
+            <li>СССР: отрицание «буржуазной науки» → кризис кибернетики</li>
+        </ul>
+    </div>
+    
+    <!-- Остальные попапы (шаблон) -->
+    <div id="fortress" class="myth-popup">
+        <span class="close-btn" onclick="hidePopup()">×</span>
+        <h2>Миф осаждённой крепости</h2>
+        <p>Контент для этого мифа...</p>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+    
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hidePopup() {
+            const popups = document.querySelectorAll('.myth-popup');
+            popups.forEach(popup => {
+                popup.style.display = 'none';
+            });
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Закрытие по ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') hidePopup();
+        });
+    </script>
+</body>
+</html>

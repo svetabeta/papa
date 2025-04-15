@@ -1,1 +1,90 @@
-Общие стили для всех файлов
+/* === ОСНОВНЫЕ СТИЛИ === */  
+body {  
+    background: linear-gradient(135deg, #D3D3D3  0%, #D3D3D3 100%);  
+    font-family: 'Nunito', sans-serif;  
+    color: #D3D3D3;  
+    line-height: 1.7;  
+}  
+
+.header {
+  background: #FFE4B5; /* Светло-бежевый */
+}
+
+.container {  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 20px;  
+}  
+
+h1, h2, h3 {  
+    font-family: 'Comfortaa', cursive;  
+    color: #2c3e50;  
+}  
+
+/* === ОБЩИЕ БЛОКИ === */  
+.text-block {  
+    padding: 30px;  
+    border-radius: 15px;  
+    margin: 30px 0;  
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);  
+}  
+
+/* Цветовые темы */  
+.pastel-yellow {  
+    background: linear-gradient(135deg, #fff9e6 0%, #fff0d0 100%);  
+    border-left: 5px solid #f1c40f;  
+}  
+
+.pastel-blue {  
+    background: linear-gradient(135deg, #f0f8ff 0%, #e0f0ff 100%);  
+    border-left: 5px solid #3498db;  
+}  
+
+.pastel-green {  
+    background: linear-gradient(135deg, #f0fff4 0%, #e0f7eb 100%);  
+    border-left: 5px solid #2ecc71;  
+}  
+
+.pastel-purple {
+    background: linear-gradient(135deg, #f3e5ff 0%, #e9d4ff 100%);
+    border-left: 5px solid #9b59b6;
+}
+
+/* === ИЗОБРАЖЕНИЯ === */  
+.content-image {  
+    width: 100%;  
+    max-width: 800px;  
+    height: auto;  
+    border-radius: 10px;  
+    border: 1px solid #eee;  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);  
+    margin: 15px auto;  
+    display: block;  
+}  
+
+/* === АДАПТИВНОСТЬ === */  
+@media (max-width: 768px) {  
+    .text-block { padding: 20px; }  
+    h1 { font-size: 1.8rem; }  
+}  
+
+/* Философские цитаты */  
+.quote-block {  
+    background: #f9f9f9;  
+    border-left: 4px solid #9b59b6;  
+    padding: 20px;  
+    font-style: italic;  
+}  
+
+/* Блоки проблем */  
+.problem-card {  
+    background: #ffebee;  
+    border-left: 5px solid #e74c3c;  
+    padding: 25px;  
+}  
+/* Футуристичные элементы */  
+.future-card {  
+    background: #e8f4f8;  
+    border: 1px dashed #3498db;  
+    padding: 25px;  
+}  

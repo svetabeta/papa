@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Теория культурного кода | BIG CULTURAL MORPH</title>
+	<link rel="stylesheet" href="../css/main.css">
     <style>
         :root {
-            --primary: #FF8C00;
+            --primary: #D3D3D3;
             --secondary: #FF4500;
             --light: #FFF8DC;
             --dark: #333;
         }
         body {
             font-family: 'Georgia', serif;
-            background: var(--light);
-            color: var(--dark);
+            background: #D3D3D3;var(--light);
+            color: green var(--dark);
             line-height: 1.7;
             margin: 0;
             padding: 0;
@@ -25,15 +26,14 @@
             padding: 2rem;
         }
         .theory-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            margin-bottom: 2rem;
+           background: #e8e0d5 ; /* Светло-бежевый */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 30px 0;
+    text-align: center;
+	color: green;
         }
         .chapter-card {
-            background: white;
+            background: #F0FFF0;
             border-radius: 10px;
             padding: 2rem;
             margin: 2rem 0;
@@ -45,7 +45,7 @@
             transform: translateY(-5px);
         }
         .chapter-title {
-            color: var(--primary);
+            color:  blue var(--primary);
             margin-top: 0;
             cursor: pointer;
         }
@@ -87,7 +87,7 @@
         <div class="chapter-card" onclick="window.location='/theory/propaganda-language'">
             <h2 class="chapter-title">Язык пропаганды</h2>
             <p>Анализ лексики, метафор и нарративов, создающих картину «осаждённой крепости».</p>
-            <a href="/theory/propaganda-language" class="btn-outline">Подробнее →</a>
+            <a href="propaganda-language.index.html" class="btn-outline">Подробнее →</a>
         </div>
 
         <!-- Раздел 3 -->

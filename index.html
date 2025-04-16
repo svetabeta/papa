@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/main.css">
     <style>
         :root {
-            --primary: #FF8C00;
+            --primary: #D3D3D3;
             --secondary: #FF4500;
             --light: #FFF8DC;
             --dark: #333;
@@ -52,17 +52,18 @@
         }
         
         .logo {
-            font-size: 2.0rem;
+            font-size: 1.8rem; color: green; 
             font-weight: bold;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
+			
         }
         
         .tagline {
             font-style: italic;
-            color: var(--secondary);
+            color: green; var(--secondary);
             margin-bottom: 2rem;
         }
         
@@ -112,8 +113,8 @@
         }
         
         .cta {
-            background: var(--secondary);
-            color: white;
+            background: var(--primary);
+            color: green;
             padding: 1rem 2.5rem;
             font-size: 1.2rem;
             border-radius: 50px;
@@ -141,7 +142,7 @@
         
         .feature-card {
             flex: 1 1 300px;
-            background: #DCDCDC;
+            background: #DCDCDC;  blue;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -155,9 +156,9 @@
         }
         
         .feature-card h3 {
-            color: var(--primary);
+            color: green;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         
         footer {
@@ -195,14 +196,16 @@
     <div class="sunburst"></div>
     
     <header>
-        <div class="logo">BIG CULTURAL MORPH</div>
-        <div class="tagline">Трансформация культурных кодов через
-		архетипы</div>
+        <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.9rem; font-weight: 700; color: green;  margin-bottom: 5px;">
+        BIG CULTURAL MORPH </div>
+        <div class="tagline">Практика культурных трансформаций
+		
+		</div>
         <nav>
-		<a href="/about.html" class="nav-btn">О проекте</a>
+		<a href="about.html" class="nav-btn">О проекте</a>
 		  <a href="/ontologiya soznaniya.html" class="nav-btn">Онтология</a>
-				  <a href="/theory/index.html" class="nav-btn">Теория</a>
-				 <a href="/practices/index.html" class="nav-btn">Практика</a>
+				  <a href="theory/index.html" class="nav-btn">Теория</a>
+				 <a href="practices/index.html" class="nav-btn">Практика</a>
 		            
 					 <a href="history/dindex.html" class="nav-btn">История</a>
               <a href="blog.html" class="nav-btn">Блог</a>

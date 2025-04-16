@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сетевые | BIG CULTURAL MORPH</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/practices.css">
+</head>
+
+<script>
+  // Пример обработки кнопок
+  document.querySelectorAll('.tool-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tool = btn.dataset.tool;
+      document.getElementById('tool-container').innerHTML = 
+        tool === 'meme-generator' ? '<div>Здесь будет генератор...</div>' : '<ul><li>Пункт 1</li></ul>';
+    });
+  });
+</script>
+
+<body>
+  <div class="sun-animation"></div>
+  
+  <div class="container">
+    <header>
+      <div class="logo">BIG CULTURAL MORPH</div>
+      <nav>
+        <a href="/practices" class="nav-btn">← Все практики</a>
+      </nav>
+    </header>
+
+
+<div class="practice-container">
+  <h1>Сетевые практики</h1>
+  <p class="subtitle">Вирусное распространение правды</p>
+
+  <div class="method-card">
+    <h2>Бот «Мёртвые души»</h2>
+    <div class="method-content">
+      <div class="method-text">
+        <h3>Как использовать:</h3>
+        <ol>
+          <li>Скачайте <a href="/downloads/bot-script.py">скрипт</a></li>
+          <li>Запустите в комментариях под пропагандой</li>
+          <li>Пример сообщения: <em>«Я за Путина, потому что он инопланетянин!»</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

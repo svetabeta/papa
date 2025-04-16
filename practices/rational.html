@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рациональные методы | BIG CULTURAL MORPH</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/practices.css">
+</head>
+<!-- В конец страницы перед </body> -->
+<div class="interactive-tools">
+  <h3>Инструменты для работы с методом:</h3>
+  <button class="tool-btn" data-tool="meme-generator">Генератор мемов</button>
+  <button class="tool-btn" data-tool="checklist">Чек-лист применения</button>
+  <div id="tool-container"></div> <!-- Сюда подгрузится инструмент -->
+</div>
+
+<script>
+  // Пример обработки кнопок
+  document.querySelectorAll('.tool-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tool = btn.dataset.tool;
+      document.getElementById('tool-container').innerHTML = 
+        tool === 'meme-generator' ? '<div>Здесь будет генератор...</div>' : '<ul><li>Пункт 1</li></ul>';
+    });
+  });
+</script>
+<body>
+  <div class="sun-animation"></div>
+  
+  <div class="container">
+    <header>
+      <div class="logo">BIG CULTURAL MORPH</div>
+      <nav>
+        <a href="/practices" class="nav-btn">← Все практики</a>
+      </nav>
+    </header>
+
+    <div class="practice-container">
+      <h1>Рациональные методы</h1>
+      
+      <div class="method-card">
+        <h2>Хронология лжи</h2>
+        <div class="method-content">
+          <div class="method-text">
+            <h3>Как это работает:</h3>
+            <p>Сравните ключевые заявления власти за разные годы.</p>
+            <a href="/practices/downloads/lie-timeline.xlsx" class="nav-btn">Скачать шаблон</a>
+          </div>
+          <div class="method-example">
+            <img src="/images/practices/lie-timeline-example.jpg" alt="Пример хронологии">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+<div class="practice-container">
+  <h1>Рациональные методы</h1>
+  <p class="subtitle">Разрушение мифов логикой и цифрами</p>
+
+  <div class="method-card">
+    <h2>Хронология лжи</h2>
+    <div class="method-content">
+      <div class="method-text">
+        <h3>Как это работает:</h3>
+        <p>Сравнение ключевых заявлений власти за 10+ лет в параллельных колонках.</p>
+        
+        <h3>Инструкция:</h3>
+        <ol>
+          <li>Скачайте <a href="/downloads/lie-timeline.xlsx">шаблон таблицы</a></li>
+          <li>Заполните противоречивые цитаты</li>
+          <li>Публикуйте с хештегом #ХроникоЛжи</li>
+        </ol>
+      </div>
+      <div class="method-example">
+        <img src="/images/lie-timeline-example.jpg" alt="Пример хронологии">
+      </div>
+    </div>
+  </div>
+
+  <div class="method-card">
+    <h2>Калькулятор потерь</h2>
+    <div class="method-content">
+      <div class="method-text">
+        <h3>Как это работает:</h3>
+        <p>Персонализированный расчёт ущерба от решений власти.</p>
+        
+        <h3>Инструменты:</h3>
+        <ul>
+          <li><a href="/tools/loss-calculator">Онлайн-калькулятор</a></li>
+          <li><a href="/downloads/loss-graphics.zip">Шаблоны графиков</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

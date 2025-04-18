@@ -1,0 +1,163 @@
+/* Наследуем переменные из main.css */
+:root {
+  --primary: #FFE4B5;
+  --secondary: #D3D3D3;
+  --light: #FFF8DC;
+  --text-color: green;
+  --dark: #333;
+}
+
+/* Сброс стандартных отступов */
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  margin: 0;
+  background: #D3D3D3; 
+  color: green;  var(--dark);
+}
+
+/* Контейнер как на главной */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Хедер с навигацией */
+header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: #D3D3D3; linear-gradient(145deg, #D3D3D3;  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #B22222; transparent;
+}
+
+/* Карточки практик */
+.practice-card {
+  background: #AFEEEE;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-top: 4px solid var(--primary);
+}
+
+/* Анимация солнца (если её нет в main.css) */
+.sun-animation {
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(circle, rgba(255,140,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  animation: rotate 180s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+/* Наследуем переменные из main.css */
+.practice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.practice-card {
+  background: #FFEFD5;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary);
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.2);
+}
+
+.method-card {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border-top: 4px solid var(--primary);
+}
+
+.method-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .method-content {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+.practice-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.method-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.method-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.method-text {
+  flex: 2;
+}
+
+.method-example {
+  flex: 1;
+}
+
+.warning {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}

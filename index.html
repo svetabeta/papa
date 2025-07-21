@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIG CULTURAL MORPH — Трансформация культурных кодов</title>
-	<link rel="stylesheet" href="css/main.css">
     <style>
+        /* Основные стили */
         :root {
             --primary: #D3D3D3;
             --secondary: #FF4500;
@@ -21,7 +21,7 @@
         
         body {
             font-family: 'Georgia', serif;
-            background: #D3D3D3;  
+            background: #D3D3D3;
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -45,25 +45,26 @@
         }
         
         header {
-           background: #e8e0d5;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    padding: 30px 0;
-    text-align: center;
+            background: #e8e0d5;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
         }
         
         .logo {
-            font-size: 1.8rem; color: green; 
+            font-size: 1.8rem;
+            color: green;
             font-weight: bold;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
-			
         }
         
         .tagline {
             font-style: italic;
-            color: green; var(--secondary);
+            color: green;
             margin-bottom: 2rem;
         }
         
@@ -77,7 +78,7 @@
         
         .nav-btn {
             padding: 0.8rem 1.5rem;
-            background: #f5f2e9;var(--primary);
+            background: #f5f2e9;
             color: green;
             border: none;
             border-radius: 50px;
@@ -103,7 +104,7 @@
         .hero h1 {
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: green; var(--dark);
+            color: green;
         }
         
         .hero p {
@@ -142,7 +143,7 @@
         
         .feature-card {
             flex: 1 1 300px;
-            background: #DCDCDC;  blue;
+            background: #DCDCDC;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -190,68 +191,186 @@
                 gap: 1rem;
             }
         }
+        
+        /* Стили для языкового переключателя */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            padding: 5px 10px;
+            background: #f5f2e9;
+            color: green;
+            border: 1px solid green;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            background: green;
+            color: white;
+        }
+        
+        /* Механизм переключения языков */
+        .language-version {
+            display: none;
+        }
+        
+        .language-version:target {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <div class="sunburst"></div>
+    <!-- Языковой переключатель -->
+    <div class="lang-switcher">
+               <a href="#en" class="lang-btn">EN</a>
+			    <a href="#ru" class="lang-btn active">RU</a>
+
+			   
+    </div>
     
-    <header>
-        <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.9rem; font-weight: 700; color: green;  margin-bottom: 5px;">
-        BIG CULTURAL MORPH </div>
-        <div class="tagline">Практика культурных трансформаций
-		
-		</div>
-        <nav>
-		<a href="about.html" class="nav-btn">О проекте</a>
-		  <a href="/ontologiya soznaniya.html" class="nav-btn">Онтология</a>
-				  <a href="theory/index.html" class="nav-btn">Теория</a>
-				 <a href="practices/index.html" class="nav-btn">Практика</a>
-		            
-					 <a href="history/dindex.html" class="nav-btn">История</a>
-              <a href="AI dialoques.html" class="nav-btn">AI dialoques</a>
-					
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <h1>Культурная трансформация — <br>без насилия и разрушения</h1>
-		<h2>от мифов диктатуры к кодам свободы</h2>
-        <p>Мы перепрограммируем авторитарные мифы, используя их же энергию. Наш метод — алхимия архетипов, а не лобовая атака.</p>
-        <a href="practices/index.html" class="cta">Присоединиться к трансформации</a>
-    </section>
-    
-    <section class="features">
-        <div class="feature-card">
-            <h3><span class="sun-icon">☀️</span> Деконструкция</h3>
-            <p>Разбираем мифы диктатур на атомарные элементы, находим их слабые места и внутренние противоречия.</p>
-        </div>
+	 <!-- Английская версия -->
+    <div id="en" class="language-version">
+        <div class="sunburst"></div>
         
-        <div class="feature-card">
-            <h3><span class="sun-icon">🔥</span> Трансмутация</h3>
-            <p>Превращаем энергию страха в энергию созидания, используя те же символы, но с новыми смыслами.</p>
-        </div>
+        <header>
+            <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.9rem; font-weight: 700; color: green; margin-bottom: 5px;">
+                BIG CULTURAL MORPH
+            </div>
+            <div class="tagline">The Practice of Cultural Transformations</div>
+            <nav>
+                <a href="about.html" class="nav-btn">About</a>
+                <a href="/ontologiya soznaniya.html" class="nav-btn">Ontology</a>
+                <a href="theory/index.html" class="nav-btn">Theory</a>
+                <a href="practices/index.html" class="nav-btn">Practices</a>
+                <a href="history/dindex.html" class="nav-btn">History</a>
+                <a href="AI dialoques.html" class="nav-btn">AI Dialogues</a>
+                <a href="magic-theater/index.html" class="nav-btn">Magic Theater</a>
+            </nav>
+        </header>
         
-        <div class="feature-card">
-            <h3><span class="sun-icon">🌱</span> Инкубация</h3>
-            <p>Создаём новые культурные ритуалы, которые естественно приживаются в существующей среде.</p>
-        </div>
-    </section>
+        <section class="hero">
+            <h1>Cultural Transformation — <br>Without Violence or Destruction</h1>
+            <h2>From Dictatorship Myths to Freedom Codes</h2>
+            <p>We reprogram authoritarian myths using their own energy. Our method is archetypal alchemy, not frontal assault.</p>
+            <a href="practices/index.html" class="cta">Join the Transformation</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h3><span class="sun-icon">☀️</span> Deconstruction</h3>
+                <p>We break down dictatorship myths into atomic elements, identifying their weak points and internal contradictions.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span class="sun-icon">🔥</span> Transmutation</h3>
+                <p>We transform fear energy into creative energy, using the same symbols but with new meanings.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span class="sun-icon">🌱</span> Incubation</h3>
+                <p>We create new cultural rituals that naturally take root in the existing environment.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Cultural Reprogramming Project | 2024</p>
+            <p style="margin-top: 1rem;">Use these tools wisely.</p>
+        </footer>
+    </div>
+
+	
+    <!-- Русская версия -->
+    <div id="ru" class="language-version">
+        <div class="sunburst"></div>
+        
+        <header>
+            <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.9rem; font-weight: 700; color: green; margin-bottom: 5px;">
+                BIG CULTURAL MORPH
+            </div>
+            <div class="tagline">Практика культурных трансформаций</div>
+            <nav>
+                <a href="about.html" class="nav-btn">О проекте</a>
+                <a href="/ontologiya soznaniya.html" class="nav-btn">Онтология</a>
+                <a href="theory/index.html" class="nav-btn">Теория</a>
+                <a href="practices/index.html" class="nav-btn">Практика</a>
+                <a href="history/dindex.html" class="nav-btn">История</a>
+                <a href="AI dialoques.html" class="nav-btn">AI диалоги</a>
+                <a href="magic-theater/index.html" class="nav-btn">Магический Театр</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h1>Культурная трансформация — <br>без насилия и разрушения</h1>
+            <h2>от мифов диктатуры к кодам свободы</h2>
+            <p>Мы перепрограммируем авторитарные мифы, используя их же энергию. Наш метод — алхимия архетипов, а не лобовая атака.</p>
+            <a href="practices/index.html" class="cta">Присоединиться к трансформации</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h3><span class="sun-icon">☀️</span> Деконструкция</h3>
+                <p>Разбираем мифы диктатур на атомарные элементы, находим их слабые места и внутренние противоречия.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span class="sun-icon">🔥</span> Трансмутация</h3>
+                <p>Превращаем энергию страха в энергию созидания, используя те же символы, но с новыми смыслами.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span class="sun-icon">🌱</span> Инкубация</h3>
+                <p>Создаём новые культурные ритуалы, которые естественно приживаются в существующей среде.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Проект культурного перепрограммирования | 2024</p>
+            <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
+        </footer>
+    </div>
     
-    <footer>
-        <p>Проект культурного перепрограммирования | 2024</p>
-        <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
-    </footer>
-    
+       
     <script>
-        // Анимация солнца при скролле
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const sunburst = document.querySelector('.sunburst');
-            sunburst.style.transform = `rotate(${scrollY / 10}deg)`;
-        });
-        
-        // Эффект "вспышки" при загрузке
-        document.addEventListener('DOMContentLoaded', () => {
+        // Управление переключением языков
+        document.addEventListener('DOMContentLoaded', function() {
+            // Установка языка по умолчанию
+            if (!window.location.hash) {
+                window.location.hash = 'ru';
+            }
+            
+            // Обновление активной кнопки
+            function updateActiveButton() {
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('href') === window.location.hash) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+            
+            // Обработчик изменения языка
+            window.addEventListener('hashchange', updateActiveButton);
+            updateActiveButton();
+            
+            // Общие скрипты для анимаций
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                document.querySelectorAll('.sunburst').forEach(sunburst => {
+                    sunburst.style.transform = `rotate(${scrollY / 10}deg)`;
+                });
+            });
+            
+            // Эффект появления
             document.body.style.opacity = '0';
             setTimeout(() => {
                 document.body.style.transition = 'opacity 1s';

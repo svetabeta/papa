@@ -1,155 +1,357 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О проекте | BIG CULTURAL MORPH</title>
-    <link rel="stylesheet" href="/css/main.css">
-    
-	<style>
+    <title>About the Project | BIG CULTURAL MORPH</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+	 /* Основные стили */
+        :root {
+            --primary: #D3D3D3;
+            --secondary: #FF4500;
+            --light: #FFF8DC;
+            --dark: #333;
+        }
+	      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            
+        body {
+            font-family: 'Georgia', serif;
+            background: #D3D3D3;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+	        
+        .sunburst {
+            position: fixed;
+            top: -50vh;
+            left: -50vw;
+            width: 200vw;
+            height: 200vh;
+            background: radial-gradient(circle, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: rotate 120s linear infinite;
+        }
+             @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+              header {
+            background: #e8e0d5;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+              .logo {
+            font-size: 1.8rem;
+            color: green;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+	      .tagline {
+            font-style: italic;
+            color: green;
+            margin-bottom: 2rem;
+        }
+               nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+		        
+        .nav-btn {
+            padding: 0.8rem 1.5rem;
+            background: #f5f2e9;
+            color: green;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+            
+        .nav-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+        }
+        
+	
         /* Дополнительные стили только для этой страницы */
         .about-container {
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 2rem;
             line-height: 1.7;
-		color: green;
         }
         .about-container h1 {
             text-align: center;
             margin-bottom: 2rem;
         }
-	 .about-container h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-	
         .principles-list {
             margin-left: 1.5rem;
         }
         .principles-list li {
             margin-bottom: 0.8rem;
         }
-		header {
+        
+        /* Стили для языкового переключателя */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1.5rem 0;
+            gap: 10px;
+            z-index: 1000;
         }
-		 .logo {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-			}
-		     .tagline {
-            font-size: 1.2rem;  /* Увеличенный шрифт */
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #5a4a3a;      /* Цвет как в основной палитре */
-            font-style: italic;
+        
+        .lang-btn {
+            padding: 5px 10px;
+            background: #f5f2e9;
+            color: green;
+            border: 1px solid green;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
         }
-		nav {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
+        
+        .lang-btn:hover, .lang-btn.active {
+            background: green;
+            color: white;
         }
-        .nav-btn {
-            padding: 0.5rem 1rem;
-            text-decoration: none;
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                position: static;
+                margin: 1rem 0;
+                justify-content: center;
+            }
         }
-        .nav-btn.active {
-            font-weight: bold;
-        }
-		
-			
     </style>
 </head>
 <body>
-    
+    <div class="sun-animation"></div>
     
     <div class="container">
         <!-- Шапка как на главной странице -->
         <header>
-           <div class="logo" style="font-family: 'Georgia', serif; font-size: 1.9rem; font-weight: 700; color: green; #A9A9A9; margin-bottom: 5px;">
-        BIG CULTURAL MORPH
-    </div>
-            <div class="tagline"><b>Трансформация авторитарных мифов через перепрограммирование архетипов</b></div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+            
+            <div class="logo">BIG CULTURAL MORPH</div>
+            <div class="tagline">Transformation of Authoritarian Myths Through Archetypal Reprogramming</div>
             <nav>
-                <a href="index.html" class="nav-btn">Главная</a>
-                <!--<a href="/about" class="nav-btn">О проекте</a> -->
-				<a href="ontologiya soznaniya.html" class="nav-btn">Онтология</a> 
-                <a href="theory/index.html" class="nav-btn">Теория</a>
-				 <a href="practices/index.html" class="nav-btn">Практики</a>
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="about.html" class="nav-btn active">About</a>
+                <a href="practices/index.html" class="nav-btn">Practices</a>
+                <a href="theory/index.html" class="nav-btn">Theory</a>
             </nav>
         </header>
-
+        
         <!-- Основной контент -->
         <main class="about-container">
-           
-		   <h1>О проекте</h1>
+            <h1>About the Project</h1>
             
-            <p>В 21-м столетии вдруг обнаружилось, что демократия оказалась более хрупкой, чем предполагалось. 
-			Иллюзия о её самодостаточности и способности к саморазвитию
-			без постоянных усилий со стороны общества оказалась опасным 
-			заблуждением. Сегодня демократический проект переживает 
-			системный кризис, причины которого носят как внутренний,
-			так и внешний характер.</p>
-            <p>С одной стороны, в самой конструкции демократических
-			институтов изначально существовали уязвимости - 
-			правовые люфты, институциональные пробелы и недостаточные 
-			механизмы защиты. Эти слабые места стали активно
-			эксплуатироваться политическими рейдерами и авторитарными 
-			силами.</p>
-            <p>С другой стороны, за последние десятилетия многократно 
-			усилились внешние антидемократические силы. 
-			Пока демократические общества пользовались плодами прогресса,
-			их оппоненты методично готовились, накапливали ресурсы и
-			разрабатывали стратегии подрыва.</p>
-			<p>Но настоящая битва происходит не на геополитической арене — 
-			она ведётся в сознании людей. Диктатура начинается не
-			с цензуры или арестов. Она рождается в головах — когда люди 
-			добровольно отказываются от сложных вопросов в пользу 
-			простых ответов, от ответственности — в пользу иллюзии
-			защиты. Это болезнь сознания, и её симптомы узнаваемы.
-			Эта болезнь не нова: все диктатуры XX-XXI веков
-			эксплуатировали одни и те же паттерны — поиск "врага", 
-			жажду порядка, миф о "золотом прошлом". Но теперь цифровые
-			технологии довели эти механизмы до совершенства, 
-			превратив коллективное сознание в идеальную среду для 
-			вируса авторитаризма. Демократия же требует "иммунитета" — 
-			критической рефлексии, толерантности к неопределённости,
-			способности к диалогу.</p>
-           
-		   <h2>Наш подход</h2>
+            <p>
+                Democracy turned out to be more fragile than assumed. 
+                The illusion of its self-sufficiency and ability to self-develop
+                without constant efforts from society turned out to be a dangerous
+                misconception. Today the democratic project is experiencing
+                a systemic crisis, the causes of which are both internal
+                and external in nature.
+            </p>
             
-            <p>Традиционные инструменты - пропаганда, мягкая сила,
-			экономическое давление - показали свою ограниченность.
-			Не сработали ни концепция "конца истории", ни теории 
-			демократической экспансии. В этих условиях требуется
-			принципиально иной подход.</p>
-
-            <p>Наш проект предлагает стратегию глубинной культурной
-			трансформации. Её основные принципы:</p>
+            <p>
+                On one hand, there were initially vulnerabilities in the very design of democratic
+                institutions - legal loopholes, institutional gaps and insufficient
+                protection mechanisms. These weak points became actively
+                exploited by political raiders and authoritarian
+                forces.
+            </p>
+            
+            <p>
+                On the other hand, over the past decades, external
+                anti-democratic forces have multiplied intensified.
+                While democratic societies enjoyed the fruits of progress,
+                their opponents methodically prepared, accumulated resources and
+                developed strategies of undermining.
+            </p>
+            
+            <p>
+                But the real battle is not taking place on the geopolitical arena — 
+                it is waged in people's consciousness. Dictatorship does not begin
+                with censorship or arrests. It is born in people's heads — when people 
+                voluntarily refuse complex questions in favor of 
+                simple answers, responsibility — in favor of the illusion
+                of protection. This is a disease of consciousness, and its symptoms are recognizable.
+                This disease is not new: all dictatorships of the XX-XXI centuries
+                exploited the same patterns — the search for an "enemy", 
+                thirst for order, myth of the "golden past". But now digital
+                technologies have brought these mechanisms to perfection, 
+                turning collective consciousness into an ideal environment for 
+                the virus of authoritarianism. Democracy, however, requires "immunity" — 
+                critical reflection, tolerance for uncertainty,
+                ability to dialogue.
+            </p>
+            
+            <h2>Our Approach</h2>
+            
+            <p>
+                Traditional tools - propaganda, soft power,
+                economic pressure - have shown their limitations.
+                Neither the concept of "end of history" nor theories of 
+                democratic expansion worked. In these conditions, a
+                fundamentally different approach is required.
+            </p>
+            
+            <p>
+                Our project proposes a strategy of deep cultural
+                transformation. Its basic principles:
+            </p>
             
             <ul class="principles-list">
-                <li>Деконструкция деструктивных архетипов и мифов</li>
-                <li>Перенаправление социальной энергии в конструктивное русло</li>
-                <li>Создание новой смысловой инфраструктуры</li>
-                <li>Работа с основаниями коллективного сознания</li>
+                <li>Deconstruction of destructive archetypes and myths</li>
+                <li>Redirection of social energy into constructive channels</li>
+                <li>Creation of new semantic infrastructure</li>
+                <li>Work with the foundations of collective consciousness</li>
             </ul>
-
-            <p>Это не пропаганда и не идеологическая борьба в 
-			традиционном понимании. Речь идёт об 
-			онтологической работе - войне смыслов, а не тел;
-			преобразовании культурных кодов, а не политических 
-			институтов.</p>
+            
+            <p>
+                This is not propaganda or ideological struggle in 
+                the traditional sense. We are talking about 
+                ontological work - a war of meanings, not bodies;
+                transformation of cultural codes, not political 
+                institutions.
+            </p>
         </main>
-
+        
         <!-- Подвал как на главной странице -->
         <footer>
-            <p>Проект культурного перепрограммирования | 2024</p>
-            <p style="margin-top: 1rem;">Используйте эти инструменты мудро.</p>
+            <p>Cultural Reprogramming Project | 2024</p>
+            <p style="margin-top: 1rem;">Use these tools wisely.</p>
         </footer>
     </div>
+    
+    <script>
+        // Переводы для этой страницы
+        const translations = {
+            en: {
+                tagline: "Transformation of Authoritarian Myths Through Archetypal Reprogramming",
+                nav_home: "Home",
+                nav_about: "About",
+                nav_practices: "Practices",
+                nav_theory: "Theory",
+                title: "About the Project",
+                paragraph1: "Democracy turned out to be more fragile than assumed. The illusion of its self-sufficiency and ability to self-develop without constant efforts from society turned out to be a dangerous misconception. Today the democratic project is experiencing a systemic crisis, the causes of which are both internal and external in nature.",
+                paragraph2: "On one hand, there were initially vulnerabilities in the very design of democratic institutions - legal loopholes, institutional gaps and insufficient protection mechanisms. These weak points became actively exploited by political raiders and authoritarian forces.",
+                paragraph3: "On the other hand, over the past decades, external anti-democratic forces have multiplied intensified. While democratic societies enjoyed the fruits of progress, their opponents methodically prepared, accumulated resources and developed strategies of undermining.",
+                paragraph4: "But the real battle is not taking place on the geopolitical arena — it is waged in people's consciousness. Dictatorship does not begin with censorship or arrests. It is born in people's heads — when people voluntarily refuse complex questions in favor of simple answers, responsibility — in favor of the illusion of protection. This is a disease of consciousness, and its symptoms are recognizable. This disease is not new: all dictatorships of the XX-XXI centuries exploited the same patterns — the search for an \"enemy\", thirst for order, myth of the \"golden past\". But now digital technologies have brought these mechanisms to perfection, turning collective consciousness into an ideal environment for the virus of authoritarianism. Democracy, however, requires \"immunity\" — critical reflection, tolerance for uncertainty, ability to dialogue.",
+                approach_title: "Our Approach",
+                approach_paragraph1: "Traditional tools - propaganda, soft power, economic pressure - have shown their limitations. Neither the concept of \"end of history\" nor theories of democratic expansion worked. In these conditions, a fundamentally different approach is required.",
+                approach_paragraph2: "Our project proposes a strategy of deep cultural transformation. Its basic principles:",
+                principle1: "Deconstruction of destructive archetypes and myths",
+                principle2: "Redirection of social energy into constructive channels",
+                principle3: "Creation of new semantic infrastructure",
+                principle4: "Work with the foundations of collective consciousness",
+                conclusion: "This is not propaganda or ideological struggle in the traditional sense. We are talking about ontological work - a war of meanings, not bodies; transformation of cultural codes, not political institutions.",
+                footer_copyright: "Cultural Reprogramming Project | 2024",
+                footer_disclaimer: "Use these tools wisely."
+            },
+            ru: {
+                tagline: "Трансформация авторитарных мифов через перепрограммирование архетипов",
+                nav_home: "Главная",
+                nav_about: "О проекте",
+                nav_practices: "Практики",
+                nav_theory: "Теория",
+                title: "О проекте",
+                paragraph1: "Демократия оказалась более хрупкой, чем предполагалось. Иллюзия о её самодостаточности и способности к саморазвитию без постоянных усилий со стороны общества оказалась опасным заблуждением. Сегодня демократический проект переживает системный кризис, причины которого носят как внутренний, так и внешний характер.",
+                paragraph2: "С одной стороны, в самой конструкции демократических институтов изначально существовали уязвимости - правовые люфты, институциональные пробелы и недостаточные механизмы защиты. Эти слабые места стали активно эксплуатироваться политическими рейдерами и авторитарными силами.",
+                paragraph3: "С другой стороны, за последние десятилетия многократно усилились внешние антидемократические силы. Пока демократические общества пользовались плодами прогресса, их оппоненты методично готовились, накапливали ресурсы и разрабатывали стратегии подрыва.",
+                paragraph4: "Но настоящая битва происходит не на геополитической арене — она ведётся в сознании людей. Диктатура начинается не с цензуры или арестов. Она рождается в головах — когда люди добровольно отказываются от сложных вопросов в пользу простых ответов, от ответственности — в пользу иллюзии защиты. Это болезнь сознания, и её симптомы узнаваемы. Эта болезнь не нова: все диктатуры XX-XXI веков эксплуатировали одни и те же паттерны — поиск \"врага\", жажду порядка, миф о \"золотом прошлом\". Но теперь цифровые технологии довели эти механизмы до совершенства, превратив коллективное сознание в идеальную среду для вируса авторитаризма. Демократия же требует \"иммунитета\" — критической рефлексии, толерантности к неопределённости, способности к диалогу.",
+                approach_title: "Наш подход",
+                approach_paragraph1: "Традиционные инструменты - пропаганда, мягкая сила, экономическое давление - показали свою ограниченность. Не сработали ни концепция \"конца истории\", ни теории демократической экспансии. В этих условиях требуется принципиально иной подход.",
+                approach_paragraph2: "Наш проект предлагает стратегию глубинной культурной трансформации. Её основные принципы:",
+                principle1: "Деконструкция деструктивных архетипов и мифов",
+                principle2: "Перенаправление социальной энергии в конструктивное русло",
+                principle3: "Создание новой смысловой инфраструктуры",
+                principle4: "Работа с основаниями коллективного сознания",
+                conclusion: "Это не пропаганда и не идеологическая борьба в традиционном понимании. Речь идёт об онтологической работе - войне смыслов, а не тел; преобразовании культурных кодов, а не политических институтов.",
+                footer_copyright: "Проект культурного перепрограммирования | 2024",
+                footer_disclaimer: "Используйте эти инструменты мудро."
+            }
+        };
+        
+        // Скрипт переключения языков
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            document.documentElement.lang = lang;
+            
+            // Обновляем текстовые элементы
+            document.querySelector('.tagline').textContent = translations[lang].tagline;
+            document.querySelector('.about-container h1').textContent = translations[lang].title;
+            document.querySelectorAll('.about-container p')[0].textContent = translations[lang].paragraph1;
+            document.querySelectorAll('.about-container p')[1].textContent = translations[lang].paragraph2;
+            document.querySelectorAll('.about-container p')[2].textContent = translations[lang].paragraph3;
+            document.querySelectorAll('.about-container p')[3].textContent = translations[lang].paragraph4;
+            document.querySelectorAll('.about-container h2')[0].textContent = translations[lang].approach_title;
+            document.querySelectorAll('.about-container p')[4].textContent = translations[lang].approach_paragraph1;
+            document.querySelectorAll('.about-container p')[5].textContent = translations[lang].approach_paragraph2;
+            document.querySelectorAll('.principles-list li')[0].textContent = translations[lang].principle1;
+            document.querySelectorAll('.principles-list li')[1].textContent = translations[lang].principle2;
+            document.querySelectorAll('.principles-list li')[2].textContent = translations[lang].principle3;
+            document.querySelectorAll('.principles-list li')[3].textContent = translations[lang].principle4;
+            document.querySelectorAll('.about-container p')[6].textContent = translations[lang].conclusion;
+            document.querySelectorAll('footer p')[0].textContent = translations[lang].footer_copyright;
+            document.querySelectorAll('footer p')[1].textContent = translations[lang].footer_disclaimer;
+            
+            // Обновляем навигацию
+            document.querySelectorAll('nav a')[0].textContent = translations[lang].nav_home;
+            document.querySelectorAll('nav a')[1].textContent = translations[lang].nav_about;
+            document.querySelectorAll('nav a')[2].textContent = translations[lang].nav_practices;
+            document.querySelectorAll('nav a')[3].textContent = translations[lang].nav_theory;
+            
+            // Обновляем заголовок страницы
+            document.title = translations[lang].title + " | BIG CULTURAL MORPH";
+        }
+        
+        const savedLanguage = localStorage.getItem('language') || 'en';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(savedLanguage);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

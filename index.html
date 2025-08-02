@@ -3,6 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- Базовые мета-теги -->
+    <title data-i18n="meta.title">Культурная трансформация и онтология сознания | BIG CULTURAL MORPH</title>
+    <meta name="description" data-i18n="meta.description" content="BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов.">
+    <meta name="keywords" data-i18n="meta.keywords" content="культурная трансформация, онтология сознания, архетипы, культурные коды, перепрограммирование сознания, авторитарные мифы, коллективное бессознательное">
+    <meta name="author" content="BIG CULTURAL MORPH">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bigculturalmorph.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bigculturalmorph.com/">
+    <meta property="og:title" data-i18n="meta.og_title" content="Культурная трансформация и онтология сознания | BIG CULTURAL MORPH">
+    <meta property="og:description" data-i18n="meta.og_description" content="BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов.">
+    <meta property="og:image" content="https://bigculturalmorph.com/images/og-image.jpg">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bigculturalmorph.com/">
+    <meta property="twitter:title" data-i18n="meta.twitter_title" content="Культурная трансформация и онтология сознания | BIG CULTURAL MORPH">
+    <meta property="twitter:description" data-i18n="meta.twitter_description" content="BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов.">
+    <meta property="twitter:image" content="https://bigculturalmorph.com/images/og-image.jpg">
+    
+    <!-- Дополнительные мета-теги -->
+    <meta name="theme-color" content="#FF8C00">
+    <meta name="msapplication-TileColor" content="#FF8C00">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Ваши стили и скрипты -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="translations.js"></script>
+</head>
+	
     <title>BIG CULTURAL MORPH — Трансформация культурных кодов</title>
     <style>
         /* Основные стили */
@@ -228,15 +265,6 @@
             display: block;
         }
     </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-	
 </head>
 <body>
     <!-- Языковой переключатель -->
@@ -350,43 +378,174 @@
     
        
     <script>
-        // Управление переключением языков
-        document.addEventListener('DOMContentLoaded', function() {
-            // Установка языка по умолчанию
-            if (!window.location.hash) {
-                window.location.hash = 'en';
-            }
-            
-            // Обновление активной кнопки
-            function updateActiveButton() {
-                document.querySelectorAll('.lang-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                    if (btn.getAttribute('href') === window.location.hash) {
-                        btn.classList.add('active');
-                    }
-                });
-            }
-            
-            // Обработчик изменения языка
-            window.addEventListener('hashchange', updateActiveButton);
-            updateActiveButton();
-            
-            // Общие скрипты для анимаций
-            window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY;
-                document.querySelectorAll('.sunburst').forEach(sunburst => {
-                    sunburst.style.transform = `rotate(${scrollY / 10}deg)`;
-                });
-            });
-            
-            // Эффект появления
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 1s';
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-    </script>
-</body>
-</html>
+    // Переводы для главной страницы
+    const translations = {
+        en: {
+            meta: {
+                title: "Cultural Transformation and Consciousness Ontology | BIG CULTURAL MORPH",
+                description: "BIG CULTURAL MORPH - research of cultural codes and consciousness ontology. Transformation of authoritarian myths through archetypal reprogramming.",
+                keywords: "cultural transformation, consciousness ontology, archetypes, cultural codes, consciousness reprogramming, authoritarian myths, collective unconscious",
+                og_title: "Cultural Transformation and Consciousness Ontology | BIG CULTURAL MORPH",
+                og_description: "BIG CULTURAL MORPH - research of cultural codes and consciousness ontology. Transformation of authoritarian myths through archetypal reprogramming.",
+                twitter_title: "Cultural Transformation and Consciousness Ontology | BIG CULTURAL MORPH",
+                twitter_description: "BIG CULTURAL MORPH - research of cultural codes and consciousness ontology. Transformation of authoritarian myths through archetypal reprogramming."
+            },
+            tagline: "The Practice of Cultural Transformations",
+            title: "Cultural Transformation — <br>Without Violence or Destruction",
+            subtitle: "From Dictatorship Myths to Freedom Codes",
+            description: "We reprogram authoritarian myths using their own energy. Our method is archetypal alchemy, not frontal assault.",
+            cta: "Join the Transformation",
+            feature1_title: "Deconstruction",
+            feature1_content: "We break down dictatorship myths into atomic elements, identifying their weak points and internal contradictions.",
+            feature2_title: "Transmutation",
+            feature2_content: "We transform fear energy into creative energy, using the same symbols but with new meanings.",
+            feature3_title: "Incubation",
+            feature3_content: "We create new cultural rituals that naturally take root in the existing environment.",
+            footer_copyright: "Cultural Reprogramming Project | 2024",
+            footer_disclaimer: "Use these tools wisely."
+        },
+        ru: {
+            meta: {
+                title: "Культурная трансформация и онтология сознания | BIG CULTURAL MORPH",
+                description: "BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов.",
+                keywords: "культурная трансформация, онтология сознания, архетипы, культурные коды, перепрограммирование сознания, авторитарные мифы, коллективное бессознательное",
+                og_title: "Культурная трансформация и онтология сознания | BIG CULTURAL MORPH",
+                og_description: "BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов.",
+                twitter_title: "Культурная трансформация и онтология сознания | BIG CULTURAL MORPH",
+                twitter_description: "BIG CULTURAL MORPH - исследование культурных кодов и онтологии сознания. Трансформация авторитарных мифов через перепрограммирование архетипов."
+            },
+            tagline: "Практика культурных трансформаций",
+            title: "Культурная трансформация — <br>без насилия и разрушения",
+            subtitle: "от мифов диктатуры к кодам свободы",
+            description: "Мы перепрограммируем авторитарные мифы, используя их же энергию. Наш метод — алхимия архетипов, а не лобовая атака.",
+            cta: "Присоединиться к трансформации",
+            feature1_title: "Деконструкция",
+            feature1_content: "Разбираем мифы диктатур на атомарные элементы, находим их слабые места и внутренние противоречия.",
+            feature2_title: "Трансмутация",
+            feature2_content: "Превращаем энергию страха в энергию созидания, используя те же символы, но с новыми смыслами.",
+            feature3_title: "Инкубация",
+            feature3_content: "Создаём новые культурные ритуалы, которые естественно приживаются в существующей среде.",
+            footer_copyright: "Проект культурного перепрограммирования | 2024",
+            footer_disclaimer: "Используйте эти инструменты мудро."
+        }
+    };
 
+    // Функция для обновления языка и мета-тегов
+    function setLanguage(lang) {
+        // Обновляем мета-теги
+        if (translations[lang].meta) {
+            // Обновляем заголовок страницы
+            document.title = translations[lang].meta.title;
+            
+            // Обновляем meta description
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', translations[lang].meta.description);
+            }
+            
+            // Обновляем meta keywords
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', translations[lang].meta.keywords);
+            }
+            
+            // Обновляем Open Graph теги
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) {
+                ogTitle.setAttribute('content', translations[lang].meta.og_title);
+            }
+            
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription) {
+                ogDescription.setAttribute('content', translations[lang].meta.og_description);
+            }
+            
+            // Обновляем Twitter теги
+            const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+            if (twitterTitle) {
+                twitterTitle.setAttribute('content', translations[lang].meta.twitter_title);
+            }
+            
+            const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+            if (twitterDescription) {
+                twitterDescription.setAttribute('content', translations[lang].meta.twitter_description);
+            }
+        }
+        
+        // Обновляем текстовые элементы
+        document.querySelector('.tagline').textContent = translations[lang].tagline;
+        document.querySelector('.hero h1').innerHTML = translations[lang].title;
+        document.querySelector('.hero h2').textContent = translations[lang].subtitle;
+        document.querySelector('.hero p').textContent = translations[lang].description;
+        document.querySelector('.cta').textContent = translations[lang].cta;
+        
+        // Обновляем карточки возможностей
+        document.querySelectorAll('.feature-card h3')[0].innerHTML = `<span class="sun-icon">☀️</span> ${translations[lang].feature1_title}`;
+        document.querySelectorAll('.feature-card p')[0].textContent = translations[lang].feature1_content;
+        document.querySelectorAll('.feature-card h3')[1].innerHTML = `<span class="sun-icon">🔥</span> ${translations[lang].feature2_title}`;
+        document.querySelectorAll('.feature-card p')[1].textContent = translations[lang].feature2_content;
+        document.querySelectorAll('.feature-card h3')[2].innerHTML = `<span class="sun-icon">🌱</span> ${translations[lang].feature3_title}`;
+        document.querySelectorAll('.feature-card p')[2].textContent = translations[lang].feature3_content;
+        
+        // Обновляем подвал
+        document.querySelectorAll('footer p')[0].textContent = translations[lang].footer_copyright;
+        document.querySelectorAll('footer p')[1].textContent = translations[lang].footer_disclaimer;
+        
+        // Обновляем навигацию
+        const navLinks = document.querySelectorAll('nav a');
+        if (navLinks.length >= 5) {
+            navLinks[0].textContent = lang === 'en' ? 'Home' : 'Главная';
+            navLinks[1].textContent = lang === 'en' ? 'About' : 'О проекте';
+            navLinks[2].textContent = lang === 'en' ? 'Ontology' : 'Онтология';
+            navLinks[3].textContent = lang === 'en' ? 'Theory' : 'Теория';
+            navLinks[4].textContent = lang === 'en' ? 'Practices' : 'Практики';
+        }
+    }
+
+    // Управление переключением языков
+    document.addEventListener('DOMContentLoaded', function() {
+        // Установка языка по умолчанию
+        const defaultLang = 'en';
+        const hashLang = window.location.hash.substring(1); // Убираем # из хэша
+        const currentLang = (hashLang === 'en' || hashLang === 'ru') ? hashLang : defaultLang;
+        
+        // Устанавливаем начальный язык
+        setLanguage(currentLang);
+        
+        // Обновление активной кнопки
+        function updateActiveButton() {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === `#${currentLang}`) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        
+        // Обработчик изменения языка
+        window.addEventListener('hashchange', function() {
+            const newLang = window.location.hash.substring(1);
+            if (newLang === 'en' || newLang === 'ru') {
+                setLanguage(newLang);
+            }
+            updateActiveButton();
+        });
+        
+        updateActiveButton();
+        
+        // Общие скрипты для анимаций
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            document.querySelectorAll('.sunburst').forEach(sunburst => {
+                sunburst.style.transform = `rotate(${scrollY / 10}deg)`;
+            });
+        });
+        
+        // Эффект появления
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 1s';
+            document.body.style.opacity = '1';
+        }, 100);
+    });
+</script>

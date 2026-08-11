@@ -1,151 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Cultural Transformation — О проекте</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #edf5f0; 
-            color: #2d3732; 
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-        header { 
-            background-color: #ffffff; 
-            border-bottom: 3px solid #60b682; 
-            position: sticky; top: 0; z-index: 50; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .nav-container { 
-            max-width: 1000px; margin: 0 auto; padding: 16px; 
-            display: flex; justify-content: space-between; align-items: center; 
-        }
-        .logo a { font-size: 20px; font-weight: 800; color: #2e7d4e; text-decoration: none; }
-        nav { display: flex; gap: 15px; }
-        .nav-link { 
-            font-size: 13px; font-weight: bold; text-transform: uppercase;
-            color: #627269; text-decoration: none; padding: 8px 14px; border-radius: 20px;
-            transition: all 0.2s;
-        }
-        .nav-link:hover { background-color: #f0f7f3; color: #2e7d4e; }
-        .nav-active { background-color: #60b682; color: #ffffff !important; }
-
-        main { max-width: 900px; margin: 0 auto; padding: 40px 16px; }
-        
-        .welcome-block {
-            background: linear-gradient(135deg, #ffffff 0%, #f6faf7 100%);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-            border-left: 8px solid #ffbc42; 
-        }
-        h1 { font-size: 21px; color: #1e4630; margin-bottom: 8px; font-weight: 800; text-transform: uppercase; }
-        .subtitle-text { font-size: 16px; color: #60b682; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
-
-        .quote-panel {
-            background-color: #fffdec;
-            border: 1px dashed #ffbc42;
-            padding: 25px;
-            border-radius: 14px;
-            margin-bottom: 30px;
-            color: #554830;
-            font-size: 15px;
-        }
-
-        .section-card { 
-            background-color: #ffffff; 
-            padding: 30px; 
-            border-radius: 16px; 
-            margin-bottom: 30px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
-            border: 1px solid #e1ebe5;
-        }
-        h2 { font-size: 22px; color: #2e7d4e; margin-bottom: 15px; border: none; padding: 0; }
-        p { margin-bottom: 16px; font-size: 16px; color: #3d4a41; }
-        
-        .styled-list { list-style: none; margin-top: 15px; }
-        .styled-list li { position: relative; padding-left: 25px; margin-bottom: 12px; font-size: 15px; color: #485c50; }
-        .styled-list li::before { content: "✦"; position: absolute; left: 0; color: #ff6b6b; font-size: 16px; }
-
-        .center-btn { text-align: center; margin-top: 40px; }
-        .btn { 
-            display: inline-block; 
-            font-weight: bold;
-            font-size: 15px; 
-            background-color: #ff6b6b; 
-            color: #ffffff; 
-            padding: 16px 36px; 
-            text-decoration: none; 
-            border-radius: 30px; 
-            box-shadow: 0 4px 14px rgba(255,107,107,0.4);
-            transition: transform 0.2s, background-color 0.2s; 
-        }
-        .btn:hover { background-color: #ff5252; transform: translateY(-2px); }
-    </style>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заголовок страницы — MORPHORG</title>
+  <link rel="stylesheet" href="theme.css">
 </head>
+     
 <body>
-
+  <div class="wrap">
     <header>
-        <div class="nav-container">
-            <div class="logo"><a href="index.html">☀️ Big Cultural Transformation</a></div>
-            <nav>
-                <a href="index.html" class="nav-link nav-active">О проекте</a>
-                <a href="diagnostics_1_1.html" class="nav-link">1. Diagnostics</a>
-                <a href="foundation_2_1.html" class="nav-link">2. Foundation</a>
-                <a href="second_level_3_1.html" class="nav-link">3. Second Level</a>
-                <a href="castalia_4_1.html" class="nav-link">4. Castalia</a>
-            </nav>
-        </div>
+      <div class="logo">M</div>
+      <div>
+        <h1>MORPHORG — платформа практик культурной трансформации</h1>
+        <div class="muted">Практики, институты и инструменты для восстановления культурной устойчивости</div>
+      </div>
     </header>
 
-    <main>
-        <div class="welcome-block">
-            <h1>Большая культурная трансформация</h1>
-            <div class="subtitle-text">Трансформация авторитарных мифов посредством архетипического перепрограммирования</div>
-            <p>В нашем проекте мы хотим бросить вызов одному из самых фундаментальных тезисов современной политологии и социальной философии: идее о том, что нельзя вмешиваться в жизнь общества с целью изменения вектора его развития.</p>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="concepts.html">Концепты</a>
+      <a href="practices.html">Практики</a>
+    </nav>
+
+    <section class="hero card" aria-labelledby="hero-title">
+      <h2 id="hero-title">Коротко о задаче</h2>
+      <p class="muted">Создать рабочую инфраструктуру смыслов: материалы, курсы и практики, которые помогают обществам формировать культуру свободы и ответственности.</p>
+    </section>
+
+    <div class="cols">
+      <main>
+        <div class="card" style="margin-top:12px">
+          <h3>Наша миссия</h3>
+          <p class="muted">Помочь сообществам обновить культурные программы, повысить автономность мышления и восстановить институты верификации смысла.</p>
+          <ul class="features">
+            <li>Концепт‑ядро — словарь и онтологии.</li>
+            <li>Практики — учебные модули и ритуалы внедрения.</li>
+            <li>Метрики — K_aut, K_rat, K_trust, K_law.</li>
+          </ul>
         </div>
 
-        <!-- Цитата политолога -->
-        <div class="quote-panel">
-            <strong>Скучный голос политолога («Вот что сказал фараон»):</strong><br>
-            <p style="font-style: italic; margin-top: 6px; margin-bottom: 0; font-size: 14px;">
-                «Политологу идея переноса прогресса извне кажется крайне сомнительной, если не колониалистской. Нет смысла вмешиваться в жизнь людей, навязывая им свои идеи о том, как им следует жить, если вы сами, находясь внутри этого общества, не осознали, что жизнь должна быть другой. Общества меняются, но организовать это извне невозможно. Изменить режим извне невозможно. Единственный способ — через оккупационную администрацию. Но это дорого и недолговечно».
-            </p>
+        <div class="card" style="margin-top:12px">
+          <h3>Быстрый старт</h3>
+          <ol>
+            <li>Ознакомьтесь с концептами — <a href="concepts.html">Концепты</a>.</li>
+            <li>Посмотрите предложенные практики — <a href="practices.html">Практики</a>.</li>
+            <li>Если нужно — прочтите о проекте — <a href="about.html">О проекте</a>.</li>
+          </ol>
+        </div>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h4>Материалы</h4>
+          <p class="muted">Исходники и тексты — см. раздел «Материалы» в репозитории.</p>
         </div>
 
-        <div class="section-card">
-            <h2>Герметичность деспотического вектора</h2>
-            <p>Мы возражаем фараонам от политологии: посмотрите на историю Китая, посмотрите на историю Индии, посмотрите на исламские страны. Их вектор развития не меняется тысячелетиями. История Китая насчитывает пять тысячелетий. А где же наш Китай? Всегда в одном и том же месте, откуда нет возврата. Из-за герметичности деспотического сознания страны оттуда сами не возвращаются.</p>
-            <p>Большинство исследователей считают, что общество подобно океану — слепой, естественной стихии, которая существует сама по себе и не терпит внешнего вмешательства. Однако как эмпирические факты, так и логические выводы говорят нам о противоположном: общество, предоставленное самому себе и развивающееся «естественным образом», неизбежно скатывается в диктатуру и превращается в нечто ужасное и отвратительное.</p>
-            <p>В последние годы деструктивные изменения очевидны: доминирование демократических стран подошло к концу. Судьба мирных людей на планете теперь зависит от группы вышедших из-под контроля автократов. Демократия начала рушиться на глазах у всех. Регресс, рецессия, эрозия, энтропия — вот ключевые слова старых демократий. Требование многополярного мира, на котором настаивают автократы, на самом деле означает лишь войну всех против всех.</p>
+        <div class="card" style="margin-top:12px">
+          <h4>Контакты</h4>
+          <p class="muted">GitHub: <a href="https://github.com/jenle52/morphorg" target="_blank">jenle52/morphorg</a></p>
         </div>
+      </aside>
+    </div>
 
-        <div class="section-card" style="border-top: 4px solid #60b682;">
-            <h2>Искусственная природа символического мира</h2>
-            <p>Наш портал создан для того, чтобы доказать: общество — это не океан и не стихийная сила. Общество — это искусственное образование, и его структура должна основываться на гуманистических и рациональных соображениях, а не на законах диких стихий.</p>
-            <p>Человеческой врожденной природы как таковой не существует — здесь присутствует социальный характер, и он полностью искусственен. В биологическом мире организмы создаются природой, и сама природа их разрушает. Природа несправедлива, она создает людей физически неравными.</p>
-            <p>Но в символическом, выдуманном мире всё иначе. Биологическое разнообразие полезно для природы, но категорически непригодно для человечества. Культурное разнообразие не может рассматриваться с тем же слепым почтением. В символическом мире люди должны исправлять то, что природа создала неправильно. Наш выдуманный мир, основанный на идеях справедливости, предполагает, что люди равны и имеют права. Человек как личность и само свободное общество — это великие искусственные конструкции Культуры. И пришло время переизобрести этот символический мир, потому что сегодня то, во что он превратился под властью автократов, вызывает ужас и страх.</p>
-        </div>
-
-        <div class="section-card" style="border-top: 4px solid #ff6b6b;">
-            <h2>Наш подход: Онтологическая работа</h2>
-            <p>Традиционные инструменты — пропаганда, мягкая сила, экономическое давление — показали свою полную ограниченность. Ни концепция «конца истории», ни теории механической демократической экспансии не сработали. Политологи правы: изменить жесткий режим извне силой или декларациями невозможно.</p>
-            <p>Но мы предлагаем принципиально иной подход — стратегию глубокого культурного перепрограммирования через обход герметичной защиты закрытого ума. Наши инструменты:</p>
-            <ul class="styled-list">
-                <li>Деконструкция разрушительных архетипов и деспотических мифов.</li>
-                <li>Перенаправление социальной энергии в конструктивные, рациональные русла.</li>
-                <li>Создание новой семантической и правовой инфраструктуры.</li>
-                <li>Работа с глубинными основами коллективного сознания.</li>
-            </ul>
-            <p style="margin-top: 15px; font-weight: bold; color: #1e4630;">Это не пропаганда в традиционном смысле. Речь идёт об онтологической работе — войне смыслов, а не тел; о трансформации культурных кодов, а не просто политических институтов.</p>
-        </div>
-
-        <div class="center-btn">
-            <a href="diagnostics_1_1.html" class="btn">🚀 Перейти к Diagnostics</a>
-        </div>
-    </main>
-
+    <footer>
+      <div>© MORPHORG — предварительная версия. Для предложений открывайте issue или PR в репозитории.</div>
+    </footer>
+  </div>
+</body>
+</html>

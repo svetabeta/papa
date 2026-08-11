@@ -1,397 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About the Project | BIG CULTURAL MORPH</title>
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-	 /* Основные стили */
-        :root {
-            --primary: #D3D3D3;
-            --secondary: #FF4500;
-            --light: #FFF8DC;
-            --dark: #333;
-        }
-	      * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-            
-        body {
-            font-family: 'Georgia', serif;
-            background: #D3D3D3;
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-	        
-        .sunburst {
-            position: fixed;
-            top: -50vh;
-            left: -50vw;
-            width: 200vw;
-            height: 200vh;
-            background: radial-gradient(circle, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0) 70%);
-            pointer-events: none;
-            z-index: -1;
-            animation: rotate 120s linear infinite;
-        }
-             @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-              header {
-            background: #e8e0d5;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            padding: 30px 0;
-            text-align: center;
-            position: relative;
-        }
-              .logo {
-            font-size: 1.8rem;
-            color: green;
-            font-weight: bold;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-	      .tagline {
-            font-style: italic;
-            color: green;
-            margin-bottom: 2rem;
-        }
-               nav {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-		        
-        .nav-btn {
-            padding: 0.8rem 1.5rem;
-            background: #f5f2e9;
-            color: green;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-            
-        .nav-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
-        }
-		
-           
-        
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--dark);
-            color: white;
-            margin-top: 3rem;
-        }
-	
-        /* Дополнительные стили только для этой страницы */
-        .about-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            line-height: 1.7;
-        }
-        .about-container h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .principles-list {
-            margin-left: 1.5rem;
-        }
-        .principles-list li {
-            margin-bottom: 0.8rem;
-        }
-        
-        /* Стили для языкового переключателя */
-        .lang-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-        
-        .lang-btn {
-            padding: 5px 10px;
-            background: #f5f2e9;
-            color: green;
-            border: 1px solid green;
-            border-radius: 15px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        
-        .lang-btn:hover, .lang-btn.active {
-            background: green;
-            color: white;
-        }
-        
-        @media (max-width: 768px) {
-            .lang-switcher {
-                position: static;
-                margin: 1rem 0;
-                justify-content: center;
-            }
-        }
-    </style>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заголовок страницы — MORPHORG</title>
+  <link rel="stylesheet" href="theme.css">
+
+   
 </head>
 <body>
-    <div class="sun-animation"></div>
-    
-    <div class="container">
-        <!-- Шапка как на главной странице -->
-        <header>
-            <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-            </div>
-            
-            <div class="logo">BIG CULTURAL MORPH</div>
-            <div class="tagline">Transformation of Authoritarian Myths Through Archetypal Reprogramming</div>
-            <nav>
-                <a href="index.html" class="nav-btn">Home</a>
-                <a href="about.html" class="nav-btn active">About</a>
-				<a href="the sum of democracy.html" class="nav-btn active">the sum of democracy</a>
-                <a href="practices/index.html" class="nav-btn">Practices</a>
-                <a href="theory/index.html" class="nav-btn">Theory</a>
-            </nav>
-        </header>
-        
-        <!-- Основной контент -->
-        <main class="about-container">
-            <h1>About the Project</h1>
-            
-            <p>
-In our project, we want to challenge one of the most fundamental theses of modern political science and social philosophy. The idea that <b>one cannot interfere in the life of a society</b> with the aim of changing its development vector.
-The collective opinion of political scientists and anyone who reflects on this topic goes something like this:</p>
+  <div class="wrap">
+    <header>
+      <div class="logo">M</div>
+      <div>
+        <h1>О проекте MORPHORG</h1>
+        <div class="muted">Платформа практик культурной трансформации</div>
+      </div>
+    </header>
+
+    <nav style="margin-top:12px">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="concepts.html">Концепты</a>
+      <a href="practices.html">Практики</a>
+    </nav>
+
+    <section class="card">
+      <h2>Что это</h2>
+      <p class="muted">MORPHORG — экспериментальная площадка для разработки и тестирования институциональных и культурных практик, направленных на укрепление автономности и рационального общественного дискурса.</p>
+	  <p> В нашем проекте мы хотим бросить вызов одному из самых фундаментальных тезисов современной политологии и социальной философии: идее о том, что нельзя вмешиваться в жизнь общества с целью изменения вектора его развития.
 <p>
-"To a political scientist, the idea of ​​transferring progress from outside seems extremely dubious, if not colonialist. There's no point in intruding on people with your ideas about how they should live, unless you've already, from within that society, realized with your own mind that life must be different. <b>Societies change, but it's impossible to organize this from the outside.</b> I'll say it in the boring voice of a political scientist: it's impossible to change a regime from the outside. The only way is through an occupation administration. But it's expensive and short-lived."
+<b>Скучный голос политолога</b> («Вот что сказал фараон» Тутанхамон, политолог Е. Шульман):
+«Политологу идея переноса прогресса извне кажется крайне сомнительной, если не колониалистской. Нет смысла вмешиваться в жизнь людей, навязывая им свои идеи о том, как им следует жить, если вы сами, находясь внутри этого общества, не осознали, что жизнь должна быть другой. Общества меняются, но организовать это извне невозможно. <b>Изменить режим извне невозможно</b>. Единственный способ — через оккупационную администрацию. Но это дорого и недолговечно».
 </p>
+<p><b>Герметичность деспотического вектора</b></p>
 <p>
-"This is what the pharaoh (political scientist) said." E. Shulman
-            </p>
-            
-            <p>
-               We say: <b>look at the history of China, look at the history of India, look at the Islamic countries. Their vector of development does not change.</b> China's history spans five millennia. And where is it, our China? Always in the same place. From where there is no return. Outside of history. Countries do not return from there on their own.
-            </p>
-            
-            <p>
-               Most people and most researchers believe that society is like <b>the ocean.</b> The ocean is an element, and society is an element, and it should be treated as such.
-            </p>
-            
-            <p>
-               A natural state is when a system lives on its own, develops naturally, and tolerates no outside interference.
-However, both empirical facts and logical conclusions tell us that a society left to its own devices, a society that develops naturally, inevitably turns into a dictatorship and something terrible and grunting.
+Мы возражаем фараонам от политологии: посмотрите на историю Китая, посмотрите на историю Индии, посмотрите на исламские страны. Их вектор развития не меняется тысячелетиями. История Китая насчитывает пять тысячелетий. А где же наш Китай? Всегда в одном и том же месте, откуда нет возврата. Из-за герметичности деспотического сознания <b> страны оттуда сами не возвращаются</b>.
 </p>
-<p>  
-Destructive changes in society have become especially evident in recent years.
-
-The dominance of democratic countries has ended.
-
-The fate of peaceful people on the planet has come to depend on a group of out-of-control autocrats.
-
-Democracy, a once highly effective tool, an instrument that had enabled society to achieve unprecedented prosperity, has begun to crumble before everyone's eyes. Regression, recession, erosion, entropy—these are the key words that describe the state of old democracies.</p>
-			   <p>
-On our website, we will try to show that society is not an ocean, not a force of nature.</p>
+Большинство исследователей считают, что общество подобно океану — <b>слепой, естественной стихии</b>, которая существует сама по себе и не терпит внешнего вмешательства. Однако как эмпирические факты, так и логические выводы говорят нам о противоположном: общество, предоставленное самому себе и развивающееся «естественным образом», неизбежно скатывается в диктатуру и превращается в нечто ужасное и отвратительное.
 <p>
-Society is an artificial entity, and it must be structured according to humanistic and rational considerations, not according to the laws of the elements.</p>
-
-There is no such thing as human nature.
-<p>There is social nature.</p>
-
-And it is artificial.
-<p>The demand for a multipolar world, insisted upon by autocrats, means a war of all against all.</p>
-Cultural diversity cannot be treated with the same reverence as biological diversity.
-			   </p>
-<p>
-Biological diversity is beneficial for nature, but categorically unsuitable for humanity, for society.</p>
-In the biological world, organisms are created by nature, and nature itself destroys or transforms them.
-<p>
-In the human world, in the symbolic world, everything is different.
-The symbolic world is created artificially, and destroying organisms is unacceptable, and creating systems in which people perish is unacceptable.</p>
-<p>
-In the biological world, nature creates natural inequalities.
-In the symbolic world, humans must correct what nature has wrongly created.
+В последние годы деструктивные изменения очевидны: <b>доминирование демократических стран подошло к концу</b>. Судьба мирных людей на планете теперь зависит от группы вышедших из-под контроля автократов. Демократия начала рушиться на глазах у всех. Регресс, рецессия, эрозия, энтропия — вот ключевые слова, которыми описывается сегодня состояние   старых демократий. 
 </p>
+<p><b>Искусственная природа символического мира</b></p>
 <p>
-Nature is unfair. It creates people physically unequal.
+Наш портал создан для того, чтобы доказать: общество — это не океан и не стихийная сила. Общество — это искусственное образование, и его структура должна основываться на гуманистических и рациональных соображениях, а не на законах диких стихий.</p>
 
-A symbolic world based on ideas of justice assumes that people are equal before God and have equal rights.
-Social structure must be carefully constructed, and its construction cannot be based on the negative traits inherent in certain cultures.
+Мы исходим из того,  врожденной природы человека  как таковой не существует — сущностью человека является совокупность общественных отношений. В биологическом мире организмы создаются природой, и сама природа их разрушает. Природа несправедлива, она создает людей физически неравными.
 
-Culture must be an object of construction, not an object of fawning over cultural diversity. Organisms are not to be pitied, but humans are.
-Humans are an invented construct. And society is also an invented construct. Although the longevity of individual societies gives them the appearance of naturalness, this is not the case. The symbolic world is an invented world. And the time has come to reimagine it. To reinvent it. Because today, what the symbolic world has become evokes horror and fear.
+Но в символическом, выдуманном мире всё иначе. Биологическое разнообразие полезно для природы, но категорически непригодно для человечества. Культурное разнообразие не может рассматриваться с тем же слепым почтением. В символическом мире люди должны исправлять то, что природа создала неправильно. Наш выдуманный мир, основанный на идеях справедливости, предполагает, что люди равны и имеют права. Человек как личность и само свободное общество — это великие искусственные конструкции Культуры. И пришло время переизобрести этот символический мир, потому что сегодня то, во что он превратился под властью автократов, вызывает ужас и страх.
 
-</p>     
-       
-            <h2>Our Approach</h2>
-            
-            <p>
-                Traditional tools - propaganda, soft power,
-                economic pressure - have shown their limitations.
-                Neither the concept of "end of history" nor theories of 
-                democratic expansion worked. In these conditions, a
-                fundamentally different approach is required.
-            </p>
-            
-            <p>
-                Our project proposes a strategy of deep cultural
-                transformation. Its basic principles:
-            </p>
-            
-            <ul class="principles-list">
-                <li>Deconstruction of destructive archetypes and myths</li>
-                <li>Redirection of social energy into constructive channels</li>
-                <li>Creation of new semantic infrastructure</li>
-                <li>Work with the foundations of collective consciousness</li>
-            </ul>
-            
-            <p>
-                This is not propaganda or ideological struggle in 
-                the traditional sense. We are talking about 
-                ontological work - a war of meanings, not bodies;
-                transformation of cultural codes, not political 
-                institutions.
-            </p>
-        </main>
-        
-        <!-- Подвал как на главной странице -->
-        <footer>
-            <p>Cultural Reprogramming Project | 2024</p>
-            <p style="margin-top: 1rem;">Use these tools wisely.</p>
-        </footer>
-    </div>
-    
-    <script>
-        // Переводы для этой страницы
-        const translations = {
-            en: {
-                tagline: "Transformation of Authoritarian Myths Through Archetypal Reprogramming",
-                nav_home: "Home",
-                nav_about: "About",
-                nav_practices: "Practices",
-                nav_theory: "Theory",
-                title: "About the Project",
-                paragraph1: "Democracy turned out to be more fragile than assumed. The illusion of its self-sufficiency and ability to self-develop without constant efforts from society turned out to be a dangerous misconception. Today the democratic project is experiencing a systemic crisis, the causes of which are both internal and external in nature.",
-                paragraph2: "On one hand, there were initially vulnerabilities in the very design of democratic institutions - legal loopholes, institutional gaps and insufficient protection mechanisms. These weak points became actively exploited by political raiders and authoritarian forces.",
-                paragraph3: "On the other hand, over the past decades, external anti-democratic forces have multiplied intensified. While democratic societies enjoyed the fruits of progress, their opponents methodically prepared, accumulated resources and developed strategies of undermining.",
-                paragraph4: "But the real battle is not taking place on the geopolitical arena — it is waged in people's consciousness. Dictatorship does not begin with censorship or arrests. It is born in people's heads — when people voluntarily refuse complex questions in favor of simple answers, responsibility — in favor of the illusion of protection. This is a disease of consciousness, and its symptoms are recognizable. This disease is not new: all dictatorships of the XX-XXI centuries exploited the same patterns — the search for an \"enemy\", thirst for order, myth of the \"golden past\". But now digital technologies have brought these mechanisms to perfection, turning collective consciousness into an ideal environment for the virus of authoritarianism. Democracy, however, requires \"immunity\" — critical reflection, tolerance for uncertainty, ability to dialogue.",
-                approach_title: "Our Approach",
-                approach_paragraph1: "Traditional tools - propaganda, soft power, economic pressure - have shown their limitations. Neither the concept of \"end of history\" nor theories of democratic expansion worked. In these conditions, a fundamentally different approach is required.",
-                approach_paragraph2: "Our project proposes a strategy of deep cultural transformation. Its basic principles:",
-                principle1: "Deconstruction of destructive archetypes and myths",
-                principle2: "Redirection of social energy into constructive channels",
-                principle3: "Creation of new semantic infrastructure",
-                principle4: "Work with the foundations of collective consciousness",
-                conclusion: "This is not propaganda or ideological struggle in the traditional sense. We are talking about ontological work - a war of meanings, not bodies; transformation of cultural codes, not political institutions.",
-                footer_copyright: "Cultural Reprogramming Project | 2024",
-                footer_disclaimer: "Use these tools wisely."
-            },
-            ru: {
-                tagline: "Трансформация авторитарных мифов через перепрограммирование архетипов",
-                nav_home: "Главная",
-                nav_about: "О проекте",
-                nav_practices: "Практики",
-                nav_theory: "Теория",
-                title: "О проекте",
-                paragraph1: "В нашем проекте мы хотим оспорить один из  самых главных  тезисов современной политологии и социальной философии. Тезис  о том, что нельзя вмешиваться в жизнь общества с целью изменить вектор его развития
+<p>Наш подход: Онтологическая работа</p>
+Традиционные инструменты — пропаганда, мягкая сила, экономическое давление — показали свою полную ограниченность. Ни концепция «конца истории», ни теории механической демократической экспансии не сработали. Политологи правы: изменить жесткий режим извне силой или декларациями невозможно.
 
-Совокупное мнение политологов и всех, кто размышляет на данную тему выглядит примерно так:
+Но мы предлагаем принципиально иной подход — стратегию <b>глубокого культурного перепрограммирования</b> через обход герметичной защиты закрытого ума. 
+<p>Наши инструменты:</p>
 
-“политологу идея перенесения прогресса извне представляется крайне сомнительной, если не колонизаторской. Нечего лезть к людям со своими представлениями о том, как они должны жить, если только ты не изнутри этого общества своим умом дошел до того, что жить надо иначе. Общества меняются, но организовать это снаружи невозможно. Скажу скучным голосом политолога: поменять режим извне нельзя.  Единственный способ – оккупационная администрация. Но это дорого и ненадолго”.
+Деконструкция разрушительных архетипов и деспотических мифов.
+Перенаправление социальной энергии в конструктивные, рациональные русла.
+Создание новой семантической и правовой инфраструктуры.
+Работа с глубинными основами коллективного сознания.
+Это не пропаганда в традиционном смысле. Речь идёт об онтологической работе — войне смыслов, а не тел; о трансформации культурных кодов, а не просто политических институтов.
+</p>
 
-“Это сказал фараон (политолог)”. Е.Шульман
-",
-                paragraph2: "С одной стороны, в самой конструкции демократических институтов изначально существовали уязвимости - правовые люфты, институциональные пробелы и недостаточные механизмы защиты. Эти слабые места стали активно эксплуатироваться политическими рейдерами и авторитарными силами.",
-                paragraph3: "С другой стороны, за последние десятилетия многократно усилились внешние антидемократические силы. Пока демократические общества пользовались плодами прогресса, их оппоненты методично готовились, накапливали ресурсы и разрабатывали стратегии подрыва.",
-                paragraph4: "Но настоящая битва происходит не на геополитической арене — она ведётся в сознании людей. Диктатура начинается не с цензуры или арестов. Она рождается в головах — когда люди добровольно отказываются от сложных вопросов в пользу простых ответов, от ответственности — в пользу иллюзии защиты. Это болезнь сознания, и её симптомы узнаваемы. Эта болезнь не нова: все диктатуры XX-XXI веков эксплуатировали одни и те же паттерны — поиск \"врага\", жажду порядка, миф о \"золотом прошлом\". Но теперь цифровые технологии довели эти механизмы до совершенства, превратив коллективное сознание в идеальную среду для вируса авторитаризма. Демократия же требует \"иммунитета\" — критической рефлексии, толерантности к неопределённости, способности к диалогу.",
-                approach_title: "Наш подход",
-                approach_paragraph1: "Традиционные инструменты - пропаганда, мягкая сила, экономическое давление - показали свою ограниченность. Не сработали ни концепция \"конца истории\", ни теории демократической экспансии. В этих условиях требуется принципиально иной подход.",
-                approach_paragraph2: "Наш проект предлагает стратегию глубинной культурной трансформации. Её основные принципы:",
-                principle1: "Деконструкция деструктивных архетипов и мифов",
-                principle2: "Перенаправление социальной энергии в конструктивное русло",
-                principle3: "Создание новой смысловой инфраструктуры",
-                principle4: "Работа с основаниями коллективного сознания",
-                conclusion: "Это не пропаганда и не идеологическая борьба в традиционном понимании. Речь идёт об онтологической работе - войне смыслов, а не тел; преобразовании культурных кодов, а не политических институтов.",
-                footer_copyright: "Проект культурного перепрограммирования | 2024",
-                footer_disclaimer: "Используйте эти инструменты мудро."
-            }
-        };
-        
-        // Скрипт переключения языков
-        function setLanguage(lang) {
-            localStorage.setItem('language', lang);
-            
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            document.documentElement.lang = lang;
-            
-            // Обновляем текстовые элементы
-            document.querySelector('.tagline').textContent = translations[lang].tagline;
-            document.querySelector('.about-container h1').textContent = translations[lang].title;
-            document.querySelectorAll('.about-container p')[0].textContent = translations[lang].paragraph1;
-            document.querySelectorAll('.about-container p')[1].textContent = translations[lang].paragraph2;
-            document.querySelectorAll('.about-container p')[2].textContent = translations[lang].paragraph3;
-            document.querySelectorAll('.about-container p')[3].textContent = translations[lang].paragraph4;
-            document.querySelectorAll('.about-container h2')[0].textContent = translations[lang].approach_title;
-            document.querySelectorAll('.about-container p')[4].textContent = translations[lang].approach_paragraph1;
-            document.querySelectorAll('.about-container p')[5].textContent = translations[lang].approach_paragraph2;
-            document.querySelectorAll('.principles-list li')[0].textContent = translations[lang].principle1;
-            document.querySelectorAll('.principles-list li')[1].textContent = translations[lang].principle2;
-            document.querySelectorAll('.principles-list li')[2].textContent = translations[lang].principle3;
-            document.querySelectorAll('.principles-list li')[3].textContent = translations[lang].principle4;
-            document.querySelectorAll('.about-container p')[6].textContent = translations[lang].conclusion;
-            document.querySelectorAll('footer p')[0].textContent = translations[lang].footer_copyright;
-            document.querySelectorAll('footer p')[1].textContent = translations[lang].footer_disclaimer;
-            
-            // Обновляем навигацию
-            document.querySelectorAll('nav a')[0].textContent = translations[lang].nav_home;
-            document.querySelectorAll('nav a')[1].textContent = translations[lang].nav_about;
-            document.querySelectorAll('nav a')[2].textContent = translations[lang].nav_practices;
-            document.querySelectorAll('nav a')[3].textContent = translations[lang].nav_theory;
-            
-            // Обновляем заголовок страницы
-            document.title = translations[lang].title + " | BIG CULTURAL MORPH";
-        }
-        
-        const savedLanguage = localStorage.getItem('language') || 'en';
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            setLanguage(savedLanguage);
-            
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    setLanguage(lang);
-                });
-            });
-        });
-    </script>
+      <h3 style="margin-top:12px">Почему важно</h3>
+      <ul>
+        <li>Демократия — инструмент, требующий культуры и институтов.</li>
+        <li>Культурные программы формируют поведение масс и их восприимчивость к информации.</li>
+      </ul>
+
+      <h3 style="margin-top:12px">Ценности</h3>
+      <p class="muted">Прозрачность, гуманизм и практичность — мы документируем вмешательства, измеряем эффект и корректируем практики.</p>
+
+      <h3 style="margin-top:12px">Как присоединиться</h3>
+      <p class="muted">Открыты к соавторам: исследователям, педагогам, дизайнерам и активистам. Начните с репозитория на GitHub и создайте issue или PR.</p>
+    </section>
+
+    <footer style="margin-top:18px;color:#6b7280;font-size:13px">
+      GitHub: <a href="https://github.com/jenle52/morphorg" target="_blank">jenle52/morphorg</a>
+    </footer>
+  </div>
 </body>
-
 </html>
-

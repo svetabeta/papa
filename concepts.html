@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заголовок страницы — MORPHORG</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .accordion-item {
+      margin-bottom: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 16px;
+      background: #f9fafb;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      user-select: none;
+      transition: background 0.2s;
+    }
+
+    .accordion-header:hover {
+      background: #f3f4f6;
+    }
+
+    .accordion-toggle {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .accordion-item.open .accordion-toggle {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      padding: 0 16px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      background: #ffffff;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 500px;
+      padding: 16px;
+    }
+
+    .accordion-content p {
+      margin: 0;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .accordion-content ol, .accordion-content ul {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+
+    .accordion-content li {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">M</div>
+      <div>
+        <h1>Концепты</h1>
+        <div class="muted">Краткая матрица ключевых смыслов</div>
+      </div>
+    </header>
+
+    <nav style="margin-top:12px">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О проекте</a>
+      <a href="concepts.html">Концепты</a>
+      <a href="practices.html">Практики</a>
+    </nav>
+
+    <section class="card" aria-labelledby="core">
+      <h2 id="core">Ядро понятий</h2>
+
+      <!-- Раздел 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Распределённая когнитивная сеть</span>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>Социум — не просто сумма индивидов, а <strong>распределённая система обработки смыслов</strong>. Наша задача — обеспечить её устойчивость и способность к верификации.</p>
+          <p style="margin-top: 12px;"><strong>Практическое применение:</strong></p>
+          <ul>
+            <li>Создание горизонтальных сетей знаний</li>
+            <li>Протоколы проверки информации на уровне сообщества</li>
+            <li>Развитие коллективного разума</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Раздел 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Культурное программирование пространства</span>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>Процесс проектирования <strong>ментальных карт</strong>: норм, ритуалов и образовательных траекторий, которые формируют поведение и мировоззрение.</p>
+          <p style="margin-top: 12px;"><strong>Компоненты:</strong></p>
+          <ol>
+            <li><strong>Ритуалы</strong> — повторяющиеся действия, создающие идентичность</li>
+            <li><strong>Нормы</strong> — правила социального взаимодействия</li>
+            <li><strong>Символы</strong> — материализация смыслов</li>
+            <li><strong>Образовательные траектории</strong> — пути развития компетенций</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Раздел 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Базовый «софт» свободы</span>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p>Три столпа, на которых держится устойчивое общество:</p>
+          <ol>
+            <li>
+              <strong>Культура рационализма</strong><br/>
+              Протоколы проверки фактов, критического мышления и аргументации. Образование в логике и эпистемологии.
+            </li>
+            <li style="margin-top: 12px;">
+              <strong>Культура свободы</strong><br/>
+              Защита автономии индивида, права на инакомыслие, механизмы противодействия манипуляции и авторитаризму.
+            </li>
+            <li style="margin-top: 12px;">
+              <strong>Культура героизма</strong><br/>
+              Готовность сохранять систему от энтропии, готовность к жертве, устойчивость к внешним давлениям и стремление к совершенствованию.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Раздел 4 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Страсть к управлению собственной жизнью</span>
+          <span class="accordion-toggle">▼</span>
+        </div>
+        <div class="accordion-content">
+          <p><strong>Культурный драйвер:</strong> Стремление к автономии и ответственности — это не просто желание, а ключ к зрелому гражданству.</p>
+          <p style="margin-top: 12px;"><strong>Что это включает:</strong></p>
+          <ul>
+            <li>Способность принимать осознанные решения</li>
+            <li>Ответственность за последствия своих выборов</li>
+            <li>Непрерывное саморазвитие и обучение</li>
+            <li>Активное участие в формировании своего окружения</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <footer style="margin-top:18px;color:#6b7280">Нужно расширить словарь? Скажите — разделим на подстраницы «словарь», «онтология», «кейсы».</footer>
+  </div>
+
+  <script>
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      // Закрыть все открытые аккордеоны
+      document.querySelectorAll('.accordion-item.open').forEach(el => {
+        el.classList.remove('open');
+      });
+      
+      // Открыть текущий, если он был закрыт
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>

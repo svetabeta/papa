@@ -1,0 +1,75 @@
+/* theme.css — Earthy / Calm */
+:root{
+  --bg: #fbfaf7;
+  --paper: #fffdf9;
+  --accent: #3b4a2a;   /* тёмно‑зелёный */
+  --accent-2:#8b6a3a;  /* тёплый коричневый */
+  --muted: #6b6b6b;
+  --shadow: rgba(28,30,26,0.06);
+  --radius: 12px;
+  --maxw: 1000px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family: "Georgia", "Times New Roman", serif;
+  background: linear-gradient(180deg,var(--bg),#f4f2ee);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* container */
+.wrap{
+  max-width:var(--maxw);
+  margin:34px auto;
+  padding:22px;
+}
+
+/* header */
+header{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.logo{
+  width:64px;height:64px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent-2),#c6a26f);
+  color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:20px;
+  box-shadow:0 8px 26px var(--shadow);
+}
+h1{margin:0;font-size:24px;color:var(--accent);font-family:Georgia,serif}
+
+/* nav */
+nav{margin-top:12px}
+nav a{
+  margin-right:14px;color:var(--accent-2);
+  text-decoration:none;font-weight:600;padding:6px 8px;border-radius:8px;
+}
+nav a:hover{background:rgba(139,106,58,0.08)}
+
+/* hero / card */
+.hero{background:var(--paper);padding:20px;border-radius:var(--radius);box-shadow:0 10px 30px var(--shadow)}
+.card{background:var(--paper);padding:16px;border-radius:10px;box-shadow:0 8px 22px var(--shadow);margin-top:12px}
+.muted{color:var(--muted)}
+
+/* layout columns */
+.cols{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:16px}
+aside .card{padding:14px}
+
+/* lists and typography */
+h2{margin:0 0 8px 0;color:var(--accent-2)}
+h3{margin:6px 0;color:var(--accent)}
+ul{padding-left:20px}
+ol{padding-left:20px}
+
+/* small screens */
+@media (max-width:820px){
+  .cols{grid-template-columns:1fr}
+  .logo{width:48px;height:48px;font-size:18px}
+}
+
+/* utility */
+.footer{margin-top:26px;color:var(--muted);font-size:13px}
+
+/* subtle accents for links */
+a{color:var(--accent-2)}
+a:hover{text-decoration:underline}
